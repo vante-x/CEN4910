@@ -1,4 +1,15 @@
-# Lieblings
+# Affordable Housing Project - Orange County, FL
+## Objective:
+To provide a website application available to the residents of Orange County, FL to search for affordable housing in their area.  Outside of rent costs, affordable housing should include additional costs, such as electricity, gas, water, cable, fees, transportation, and food.  Search results should also provide information about nearby schools, restaurants, shopping, and transit options.  The application should be easy to access, user-friendly and provide quick results.
+
+## Original Contributors: 
+Joanna Smith<br>
+Gary Johnston<br>
+Natalie Ayala<br>
+Devante McFarlane<br>
+Octavian Carteleanu<br>
+
+# Technical Specs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
