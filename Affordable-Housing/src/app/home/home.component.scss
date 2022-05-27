@@ -1,22 +1,28 @@
+
+
 .ll-hero {
-  background: linear-gradient(180deg, #73b58d 40%, rgba(115, 181, 141, 0) 100%);
-  padding: 200px 0 100px;
+  // background: linear-gradient(180deg, #12908E 40%, rgba(115, 181, 141, 0) 100%);
+  padding: 75px 0 100px;
   position: relative;
   .container {
     position: relative;
+
     z-index: 3;
   }
   &__particles {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
   }
   &-text {
+
+    right: 0;
     h1 {
       font-size: 32px;
       line-height: 50px;
+      text-align: right;
     }
   }
 }
@@ -204,4 +210,17 @@
       letter-spacing: 20px;
     }
   }
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
