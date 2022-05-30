@@ -1,7 +1,7 @@
 
 
 .ll-hero {
-  // background: linear-gradient(180deg, #12908E 40%, rgba(115, 181, 141, 0) 100%);
+  background: linear-gradient(180deg, #12908E 40%, rgba(115, 181, 141, 0) 100%);
   padding: 75px 0 150px;
   position: relative;
   .container {
@@ -35,7 +35,7 @@
   position: relative;
   padding: 64px 15px 0px;
   &-area {
-    padding: 80px 0;
+    padding: 50px 0 ;
   }
   &__title {
     font-size: 40px;
@@ -223,3 +223,5 @@
   -o-object-position: center;
      object-position: center;
 }
+
+
