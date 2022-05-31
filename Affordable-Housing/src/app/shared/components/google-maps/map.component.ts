@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { GoogleMap, MapInfoWindow, MapMarker } from '@angular/google-maps';
+import { GoogleMap, MapInfoWindow, MapMarker, MapTransitLayer } from '@angular/google-maps';
+
 
 @Component({
   selector: 'app-google-map',
@@ -7,22 +8,25 @@ import { GoogleMap, MapInfoWindow, MapMarker } from '@angular/google-maps';
   styleUrls: ['./map.component.scss'],
 })
 export class MapComponent {
+  private _map: Promise<google.maps.Map>;
+  private _mapResolver: (value?: google.maps.Map) => void;
+
+  MapTransitLayer: MapTransitLayer;
   title = 'angular-google-maps-app';
-
-
   map!: google.maps.Map;
   @ViewChild(MapInfoWindow, { static: false })
   info!: MapInfoWindow;
-
   zoom = 12;
   maxZoom = 15;
   minZoom = 8;
+  
+ mapId: 'e9cb7eae3ad7dbe';
   center!: google.maps.LatLngLiteral;
   options: google.maps.MapOptions = {
-    zoomControl: false,
-    scrollwheel: false,
+    zoomControl: true,
+    scrollwheel: true,
     disableDoubleClickZoom: true,
-    mapTypeId: 'hybrid',
+    mapTypeId: 'roadmap',
     maxZoom:this.maxZoom,
     minZoom:this.minZoom,
   }
@@ -36,6 +40,7 @@ export class MapComponent {
         lng: position.coords.longitude,
       }
     })
+
   }
 
   zoomIn() {
