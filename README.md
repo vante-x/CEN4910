@@ -11,7 +11,24 @@ Octavian Carteleanu<br>
 
 # Technical Specs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.<br>
+<p>
+  Steps for setup:<br>
+  <ul>
+    <li>Install nvm</li>
+    <li>Install angular</li>
+    <li>Install vs code</li>
+    <li>Download the project from github</li>
+    <li>Open Command prompt</li>
+    <li>Cd to directory with project</li>
+    <li>Npm install</li>
+    <li>Ng serve (compile)</li>
+    <li>http://localhost:4200/</li>
+    <li>to view in another device:</li>
+     <li>ng serve --host 0.0.0.0</li>
+    <li>Locate your computer's ip address and copy it to your mobile browser</li>
+    </ul>
+Video: https://vimeo.com/713488500/4b8548aa14
 
 ## Development server
 
