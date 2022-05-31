@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MapComponent } from '../shared/components/google-maps/map.component';
+
 
 @Component({
   selector: 'll-contact',

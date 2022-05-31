@@ -6,11 +6,11 @@ import { GoogleMap, MapInfoWindow, MapMarker } from '@angular/google-maps';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
 })
-export class AppComponent {
+export class MapComponent {
   title = 'angular-google-maps-app';
 
-  @ViewChild('myGoogleMap', { static: false })
-  map!: GoogleMap;
+
+  map!: google.maps.Map;
   @ViewChild(MapInfoWindow, { static: false })
   info!: MapInfoWindow;
 
