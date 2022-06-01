@@ -8,6 +8,10 @@ const baseLayoutRouting: Routes = [
     loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
   },
   {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then(m => m.SearchModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
   },
