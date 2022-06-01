@@ -1,13 +1,39 @@
 <div class="footer">
   <div class="footer-widget py-20">
     <div class="container">
-      <p class="text-white">This is where the footer goes.</p>
+      <div class="flex justify-end items-center">
+        <!-- <p class="text-white">This is where the footer goes.</p> -->
+        <ul class="text-white flex item-center ml-5" >
+          <li *ngFor="let menu of menuList">
+            <a
+              mat-button
+              [routerLink]="[menu.path]"
+              routerLinkActive="bg-gray-100"
+              class="text-lg font-bold py-2 px-5"
+              >{{ menu.name }}</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- <button
+        *ngIf="isLessThenLargeDevice"
+        (click)="toggleSidenav.emit()"
+        class="text-white _sidenav__toggler ml-auto md:ml-3 ms-sm-3"
+        mat-icon-button
+      >
+        <mat-icon>menu</mat-icon>
+      </button> -->
     </div>
   </div>
+
   <div class="footer-bottom">
     <div class="container">
-      <div class="lg:flex flex-wrap items-center py-10 border-t border-gray-700">
-        <nav class="_nav flex flex-wrap items-center lg:ml-auto lg:order-last mb-5 lg:mb-0">
+      <div class="lg:flex justify-end flex-wrap items-center py-10 border-t border-gray-700">
+        <nav class="_nav flex flex-wrap items-center justify-end lg:ml-auto lg:order-last mb-5 lg:mb-0">
+          
+          <a href="javascript:void(0)" class="_nav__link text-white uppercase hover:text-accent duration-500 font-medium">
+            TERMS AND CONDITIONS
+          </a>
           <a href="javascript:void(0)" class="_nav__link text-white hover:text-accent duration-500">
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -30,18 +56,14 @@
             </svg>
           </a>
         </nav>
-        <nav class="_nav flex flex-wrap items-center">
-          <a
-            href="javascript:void(0)"
-            class="_nav__link text-white uppercase hover:text-accent duration-500 font-medium"
-            >Conditions</a
-          >
-          <a
+        <!-- <nav class="_nav flex flex-wrap items-center">
+          removed to adhere to project technical document requirements -->
+          <!-- <a
             href="javascript:void(0)"
             class="_nav__link text-white uppercase hover:text-accent duration-500 font-medium"
             >DATA PROTECTION</a
           >
-        </nav>
+        </nav> -->
       </div>
     </div>
   </div>

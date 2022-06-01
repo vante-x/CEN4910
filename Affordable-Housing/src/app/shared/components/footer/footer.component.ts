@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, EventEmitter, HostListener, Input, OnInit, Output } from '@angular/core';
+import { menuList as staticMenuList } from '../../data/menus';
 
 @Component({
   selector: 'll-footer',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  @Input() topFixed: boolean;
+  @Output() toggleSidenav = new EventEmitter();
+  isScrolled: boolean;
+  menuList = [];
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
+    this.menuList = staticMenuList;
+
   }
 
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isScrolled = window.pageYOffset > 15;
+  }
 }
+
+
