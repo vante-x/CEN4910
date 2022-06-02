@@ -20,6 +20,10 @@ const baseLayoutRouting: Routes = [
     loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
   },
   {
+    path: 'conditions',
+    loadChildren: () => import('./conditions/conditions.module').then(m => m.ConditionsModule)
+  },
+  {
     path: '',
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
