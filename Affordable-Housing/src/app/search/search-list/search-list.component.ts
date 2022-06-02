@@ -19,5 +19,4 @@ export class SearchListComponent implements OnInit {
       this.isLoaded = true
     }, 8000)
   }
-
 }

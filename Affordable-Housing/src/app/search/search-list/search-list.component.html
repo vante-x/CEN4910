@@ -9,43 +9,269 @@
                         <mat-icon>tune</mat-icon> ADVANCED SEARCH
                     </button>
                 </div>
+                I am Looking for...
                 <div class="mt-3 flex">
-                    <input type="text" placeholder="I am looking for ..."
-                        class="flex-1 w-full sm:text-sm lg:text-xl border-gray-300 rounded-l-md py-3 px-6" required />
-                    <button class="bg-primary w-24 rounded-r-md">
+                    <!--<input type="text" placeholder="I am looking for..."
+                        class="flex-1 w-full sm:text-sm lg:text-xl border-gray-300 rounded-l-md py-3 px-6" required />-->
+                    <!--<select name="categories" class="
+                            mt-1
+                            block
+                            w-full
+                            py-2
+                            px-3
+                            border border-gray-300
+                            bg-white
+                            rounded-md
+                            shadow-sm
+                            focus:outline-none
+                            focus:ring-indigo-500
+                            focus:border-indigo-500
+                            sm:text-sm
+                                        ">
+                        <option></option>
+                        <option>Apartment</option>
+                        <option>House</option>
+                        <option>Townhome</option>
+                        <option>Condominium</option>
+
+                    </select>-->
+                    <input type="radio" value="Apartment" style="margin-right:10px; margin-left: 150px;"><label
+                        style="margin-right:50px">Apartment</label>
+                    <input type="radio" value="House" style="margin-right:10px"><label
+                        style="margin-right:50px">House</label>
+                    <input type="radio" value="Townhome" style="margin-right:10px"><label
+                        style="margin-right:50px">Townhome</label>
+                    <input type="radio" value="Condominium" style="margin-right:10px"><label
+                        style="margin-right:50px">Condominium</label>
+                    <button class="bg-primary w-24 rounded-r-md" style="margin-left:50px">
                         <mat-icon class="leading-8">search</mat-icon>
                     </button>
                 </div>
+                <!--<div class="col-span-6 sm:col-span-3">
+                    <input type="text" class="
+                                mt-1
+                                focus:ring-indigo-500
+                                focus:border-indigo-500
+                                block
+                                w-full
+                                shadow-sm
+                                sm:text-sm
+                                border-gray-300
+                                rounded-md
+                              " placeholder="Start price" />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <input type="text" class="
+                                mt-1
+                                focus:ring-indigo-500
+                                focus:border-indigo-500
+                                block
+                                w-full
+                                shadow-sm
+                                sm:text-sm
+                                border-gray-300
+                                rounded-md
+                              " placeholder="End price" />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                    <select name="categories" class="
+                                        mt-1
+                                        block
+                                        w-full
+                                        py-2
+                                        px-3
+                                        border border-gray-300
+                                        bg-white
+                                        rounded-md
+                                        shadow-sm
+                                        focus:outline-none
+                                        focus:ring-indigo-500
+                                        focus:border-indigo-500
+                                        sm:text-sm
+                                                  ">
+                        <option>Housing type</option>
+                        <option>Apartment</option>
+                        <option>Condo</option>
+                        <option>House</option>
+                    </select>
+                </div>-->
             </div>
             <mat-expansion-panel [expanded]="advanceSearchExpanded">
                 <div class="grid grid-cols-6 gap-6 mt-4">
-                    <div class="col-span-6 sm:col-span-3">
-                        <input type="text" class="
-                mt-1
-                focus:ring-indigo-500
-                focus:border-indigo-500
-                block
-                w-full
-                shadow-sm
-                sm:text-sm
-                border-gray-300
-                rounded-md
-              " placeholder="Start price" />
+                    <ul>Pet Policy Options
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Pet Friendly
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">No Pets
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Cats
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Dogs
+                        </li>
+                    </ul>
+                    <ul>Unit Amenities
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Washer and Dryer Hookup
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">washer and Dryer
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Dishwasher
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Patio
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Microwave
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">High Speed Internet
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">WheelChair Access
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Furnished
+                        </li>
+                    </ul>
+                    <ul>Community Amenities
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Controled Access
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Fitness Center
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Pool
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Covered Parking
+                        </li>
+                        <li>
+                            <input type="checkbox" style="margin-right:10px">Garage
+                        </li>
+                    </ul>
+                    <!--class="col-span-6 sm:col-span-3"-->
+                    <div class="col-span-6 sm:col-span-3">Price Range
+                        <select name="rating" class="
+                            mt-1
+                            block
+                            w-full
+                            py-2
+                            px-3
+                            border border-gray-300
+                            bg-white
+                            rounded-md
+                            shadow-sm
+                            focus:outline-none
+                            focus:ring-indigo-500
+                            focus:border-indigo-500
+                            sm:text-sm
+                            ">
+                            <option>Less than $1000</option>
+                            <option>$1001 - $1500</option>
+                            <option>$1501-$2000</option>
+                            <option>$2000 +</option>
+                        </select>Utility Cost
+                        <select name="rating" class="
+                            mt-1
+                            block
+                            w-full
+                            py-2
+                            px-3
+                            border border-gray-300
+                            bg-white
+                            rounded-md
+                            shadow-sm
+                            focus:outline-none
+                            focus:ring-indigo-500
+                            focus:border-indigo-500
+                            sm:text-sm
+                            ">
+                            <option>Less than $100</option>
+                            <option>$101 - $150</option>
+                            <option>$151 - $200</option>
+                            <option>$200 +</option>
+                        </select>Bedrooms
+                        <select name="rating" class="
+                            mt-1
+                            block
+                            w-full
+                            py-2
+                            px-3
+                            border border-gray-300
+                            bg-white
+                            rounded-md
+                            shadow-sm
+                            focus:outline-none
+                            focus:ring-indigo-500
+                            focus:border-indigo-500
+                            sm:text-sm
+                            ">
+                            <option>Studio</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3+</option>
+                        </select>Bathrooms
+                        <select name="rating" class="
+                            mt-1
+                            block
+                            w-full
+                            py-2
+                            px-3
+                            border border-gray-300
+                            bg-white
+                            rounded-md
+                            shadow-sm
+                            focus:outline-none
+                            focus:ring-indigo-500
+                            focus:border-indigo-500
+                            sm:text-sm
+                            ">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>2 1/2</option>
+                            <option>3 +</option>
+                        </select>Property Name
+                        <select name="rating" class="
+                            mt-1
+                            block
+                            w-full
+                            py-2
+                            px-3
+                            border border-gray-300
+                            bg-white
+                            rounded-md
+                            shadow-sm
+                            focus:outline-none
+                            focus:ring-indigo-500
+                            focus:border-indigo-500
+                            sm:text-sm
+                            ">
+                            <option>Bikini Bottom Apartments</option>
+                            <option>123 Elmo Street</option>
+                            <option>9876 Kidney Lane</option>
+                            <option>Rock Bottom Apartments</option>
+                            <option>3649 Bottle Cap Street</option>
+                            <option>2323 Alfredo Circle</option>
+                            <option>High Price Luxury Apartments</option>
+                            <option>3333 Studio Top Street</option>
+                            <option>Dog Built Apartments</option>
+                        </select>
                     </div>
-                    <div class="col-span-6 sm:col-span-3">
-                        <input type="text" class="
-                mt-1
-                focus:ring-indigo-500
-                focus:border-indigo-500
-                block
-                w-full
-                shadow-sm
-                sm:text-sm
-                border-gray-300
-                rounded-md
-              " placeholder="End price" />
+                    <!--<div class="col-span-6 sm:col-span-3">
+                    </div>Properties Placeholder
+                    <div>Bedrooms Placeholder
                     </div>
-                    <div class="col-span-6 sm:col-span-3">
+                    <div Bathrooms place holder>
+                    </div>-->
+                    <!--<div> Utilities Placehiolder
+                    </div>-->
+                    <!--<div class="col-span-6 sm:col-span-3">
                         <select name="categories" class="
                 mt-1
                 block
@@ -60,10 +286,37 @@
                 focus:ring-indigo-500
                 focus:border-indigo-500
                 sm:text-sm
-              ">
-                            <option>Cost</option>
-                            <option>Location</option>
-                            <option>Size</option>
+              "><div class="col-span-6 sm:col-span-3">
+                        <select name="categories" class="
+                        mt-1
+                        block
+                        w-full
+                        py-2
+                        px-3
+                        border border-gray-300
+                        bg-white
+                        rounded-md
+                        shadow-sm
+                        focus:outline-none
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        sm:text-sm
+                                  ">
+                            <option>Housing type</option>
+                            <option>Apartment</option>
+                            <option>Condo</option>
+                            <option>House</option>
+                        </select>
+                    </div>
+                            <option>Unit Amenities</option>
+                            <option>Washer and Dryer Hookup</option>
+                            <option>Washer and Dryer</option>
+                            <option>Dishwasher</option>
+                            <option>Patio / Balcony</option>
+                            <option>Microwave</option>
+                            <option>High Speed Internet</option>
+                            <option>Wheelchair Acess</option>
+                            <option>Furnished</option>
                         </select>
                     </div>
                     <div class="col-span-6 sm:col-span-3">
@@ -82,16 +335,18 @@
                 focus:border-indigo-500
                 sm:text-sm
               ">
-                            <option>Rating</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option>Community Amenities</option>
+                            <option>Controled Access</option>
+                            <option>Fitness Center</option>
+                            <option>Pool</option>
+                            <option>Covered Parking</option>
+                            <option>Garage</option>
                         </select>
-                    </div>
+                    </div>-->
                     <div class="col-span-6">
-                        <button mat-flat-button color="accent">Filter</button>
+                        <button mat-flat-button
+                            style="margin-right:20px ; background-color: #4CAF50">ApplyFilters</button>
+                        <button mat-flat-button style="background-color:grey">Clear Filters</button>
                     </div>
                 </div>
             </mat-expansion-panel>
