@@ -54,27 +54,26 @@
   }
 }
 .additional_details {
-    background-color: lightgrey;
     font-size: medium;
-    color: orangered;
 }
 .amenities_details {
-    background-color: lightcyan;
+    background-color: #f3f3f3;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 200;
+    font-weight: 400;
 }
 .expenses_title {
-    background-color: aquamarine;
+    background-color: #c7c7c7;
 }
 .other_expenses {
-    background-color: lightcyan;
+    background-color: #f3f3f3;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 200;
+    font-weight: 400;
 }
 .amenities_languages {
-    background-color: aquamarine;
+    background-color: #c7c7c7;
+}
+.quote {
+    font-style: italic;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   ._title {
