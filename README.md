@@ -13,12 +13,14 @@ Octavian Carteleanu<br>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.<br>
 <p>
-  Steps for setup:<br>
+  <b>Steps for setting up Angular locally:</b><br>
   <ul>
     <li>Install nvm</li>
     <li>Install angular</li>
-    <li>Install vs code</li>
-    <li>Download the project from github</li>
+    <li>Install VS code</li>
+    <li>Login to GitHub joannashad/CEN4910</li>
+    <li>Clone Main</li>
+    <li>Create a Branch for the issue you are working on</li>
     <li>Open Command prompt</li>
     <li>Cd to directory with project</li>
     <li>Npm install</li>
