@@ -3,11 +3,12 @@
     <div class="grid grid-cols-12 gap-8">
       <div class="col-span-12 md:col-span-6 xl:col-span-6 border p-5">
         <a href="javascript:void(0)" class="category text-primary inline-block mb-5">Housing Type</a>
-        <h1 class="_title font-medium">Name of Housing</h1>
-        <h3 class="_title font-medium">Address of housing</h3>
-        <h5 class="category text-primary inline-block mb-5 additional_details">Floor </h5> <br>       
-        <h5 class="category text-primary inline-block mb-5 additional_details">Minimum income requirement</h5><br>
-        <h5 class="category text-primary inline-block mb-5 additional_details">Available from </h5>
+        <h1 class="_title font-medium">Bikini Bottom Apartments</h1>
+        <h3 class="_title font-medium">4321 Forrest Rd<br>Orlando, FL
+        </h3>
+        <h5 class="category text-primary inline-block mb-5 additional_details">2nd Floor </h5> <br>       
+        <h5 class="category text-primary inline-block mb-5 additional_details">Minimum income requirement: $600</h5><br>
+        <h5 class="category text-primary inline-block mb-5 additional_details">Available from June to July</h5>
         <br>
         <h6 class="amenities_languages">Amenities</h6>
         <div class="amenities_details">
@@ -30,7 +31,7 @@
         <ul class="product-meta flex flex-wrap items-center mt-8 mb-8">
           <li class="mr-4">
             <a class="flex items-center pr-4 py-1 hover:text-primary" href="javascript:void(0)"
-              ><mat-icon class="mr-2" color="warn">start</mat-icon> 4.5/5
+              ><mat-icon class="mr-2" color="warn">stars</mat-icon> 4.5/5
             </a>
           </li>
 
@@ -52,20 +53,46 @@
              services of my life with AAA Property Management"</blockquote>
         </div>
       </div>
-      <div class="col-span-12 md:col-span-6 xl:col-span-6">
+
         <div class="border">
+                  
+        <div>  
+          <form >
+          <label>
+            <input type="radio"  ng-control="options" ngmodel value="Map" onchange="selectMap($event)">
+            Map
+          </label>
+          <label>
+            <input type="radio" ng-control="options" ngmodel  value="Shopping" onchange="selectMap($event)">
+            Shopping
+          </label>
+          <label>
+            <input type="radio" ng-control="options" ngmodel value="Transit" onchange="selectMap($event)">
+            Transit
+          </label>
+          <label>
+            <input type="radio" ng-control="options" ngmodel value="Commute" onchange="selectMap($event)">
+            Commute
+          </label>
+         </form>
+
+         </div>
+        <div>
+          <img name="map" src="/assets/images/google-maps/map_single_location3.jpg" > <!-- src={{mapsource}} -->
+
+        </div>
           <div class="border-b text-center pt-10 pb-10">
             <div class="text-accent text-4xl font-semibold">$3,000.00</div>
             <div class="category text-primary inline-block mb-5">Monthly Rent</div>
           </div>
             <h6 class="expenses_title">Other monthly expenses</h6>
           <div class="other_expenses">
-            <p>Electricity</p>
-            <p>Gas</p>
-            <p>Water</p>
-            <p>Sewer</p>
-            <p>Internet</p>
-            <p>Cable</p>
+            <p>Electricity: $80</p>
+            <p>Gas: $20</p>
+            <p>Water $30</p>
+            <p>Sewer: $10</p>
+            <p>Internet: $60</p>
+            <p>Cable: $20</p>
           </div>
           <div class="border-b p-5 text-center">
             <p class="mt-2">Office hours: 9 - 5</p>
