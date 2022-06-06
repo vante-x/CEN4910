@@ -1,8 +1,8 @@
 <div class="mt-32">
   <div class="container">
     <div class="grid grid-cols-12 gap-8">
-      <div class="col-span-12 md:col-span-6 xl:col-span-6 border p-5">
-        <a href="javascript:void(0)" class="category text-primary inline-block mb-5">Housing Type</a>
+      <div class="col-span-12 md:col-span-6 xl:col-span-8 border p-5">
+        <a href="javascript:void(0)" class="category text-primary inline-block mb-5">Apartment</a>
         <h1 class="_title font-medium">Bikini Bottom Apartments</h1>
         <h3 class="_title font-medium">4321 Forrest Rd<br>Orlando, FL
         </h3>
@@ -52,34 +52,35 @@
           <blockquote class="quote">"I have consistently experienced the best residential support
              services of my life with AAA Property Management"</blockquote>
         </div>
-      </div>
-
-        <div class="border">
-                  
-        <div>  
-          <form >
+        </div>
+      <div class="col-span-12 md:col-span-6 xl:col-span-4"> 
+        
+        <form >
+        <div class="form-group" >  
           <label>
-            <input type="radio"  ng-control="options" ngmodel value="Map" onchange="selectMap($event)">
+            <input checked="true" name="list-group"  type="radio"  formControlName="options"  value="map" (change)="changeMap($event)">
             Map
           </label>
           <label>
-            <input type="radio" ng-control="options" ngmodel  value="Shopping" onchange="selectMap($event)">
-            Shopping
+            <input type="radio" name="list-group"  formControlName="options"   value="shopping" (change)="changeMap($event)">
+            Restaurants
           </label>
           <label>
-            <input type="radio" ng-control="options" ngmodel value="Transit" onchange="selectMap($event)">
+            <input type="radio" name="list-group"  formControlName="options"  value="transit" (change)="changeMap($event)">
             Transit
           </label>
           <label>
-            <input type="radio" ng-control="options" ngmodel value="Commute" onchange="selectMap($event)">
+            <input type="radio" name="list-group"   formControlName="options"  value="commute" (change)="changeMap($event)">
             Commute
           </label>
-         </form>
-
+          <label>
+            <input type="radio" name="list-group"  formControlName="options"  value="schools" (change)="changeMap($event)">
+            Schools
+          </label>
          </div>
+        </form>
         <div>
-          <img name="map" src="/assets/images/google-maps/map_single_location3.jpg" > <!-- src={{mapsource}} -->
-
+          <img name="map" src={{mapsource}}  > <!-- src="/assets/images/google-maps/map_single_location3.jpg" -->
         </div>
           <div class="border-b text-center pt-10 pb-10">
             <div class="text-accent text-4xl font-semibold">$3,000.00</div>
@@ -117,4 +118,3 @@
       </div>
     </div>
   </div>
-</div>

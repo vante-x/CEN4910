@@ -1,0 +1,31 @@
+
+ <div class="col-span-12 md:col-span-6 xl:col-span-4"> 
+  <div>  
+    <form >
+    <label>
+      <input type="radio"  ng-control="options" ngmodel value="Map" onchange="selectMap($event)">
+      Map
+    </label>
+    <label>
+      <input checked="true" type="radio" ng-control="options" ngmodel  value="Shopping" onchange="selectMap($event)">
+      Shopping
+    </label>
+    <label>
+      <input type="radio" ng-control="options" ngmodel value="Transit" onchange="selectMap($event)">
+      Transit
+    </label>
+    <label>
+      <input type="radio" ng-control="options" ngmodel value="Commute" onchange="selectMap($event)">
+      Commute
+    </label>
+   </form>
+   </div>
+  <div>
+    <img name="map" src="/assets/images/google-maps/map_shopping.jpg" > <!-- src={{mapsource}} -->
+  </div>
+
+
+
+
+
+
