@@ -57,30 +57,36 @@
         <div>  
           <form >
           <label>
-            <input type="radio"  ng-control="options" ngmodel value="Map" onchange="selectMap($event)">
+            <input checked="true" name="list-group"  type="radio"  formControlName="options"  value="map" (change)="changeMap($event)">
             Map
           </label>
           <label>
-            <input type="radio" ng-control="options" ngmodel  value="Shopping" onchange="selectMap($event)">
-            Shopping
+            <input type="radio" name="list-group"  formControlName="options"   value="shopping" (change)="changeMap($event)">
+            Restaurants
           </label>
           <label>
-            <input type="radio" ng-control="options" ngmodel value="Transit" onchange="selectMap($event)">
+            <input type="radio" name="list-group"  formControlName="options"  value="transit" (change)="changeMap($event)">
             Transit
           </label>
           <label>
-            <input type="radio" ng-control="options" ngmodel value="Commute" onchange="selectMap($event)">
+            <input type="radio" name="list-group"   formControlName="options"  value="commute" (change)="changeMap($event)">
             Commute
           </label>
-         </form>
+          <label>
+            <input type="radio" name="list-group"  formControlName="options"  value="schools" (change)="changeMap($event)">
+            Schools
+          </label>
+        </form>
          </div>
         <div>
-          <img name="map" src="/assets/images/google-maps/map_single_location3.jpg" > <!-- src={{mapsource}} -->
+          <img name="map" src={{mapsource}}  > <!-- src="/assets/images/google-maps/map_single_location3.jpg" -->
         </div>
           <div class="border-b text-center pt-10 pb-10">
             <div class="text-accent text-4xl font-semibold">$3,000.00</div>
+         </div>
+        
             <div class="category text-primary inline-block mb-5">Monthly Rent</div>
-          </div>
+          
             <h6 class="expenses_title">Other monthly expenses</h6>
           <div class="other_expenses">
             <p>Electricity: $80</p>
