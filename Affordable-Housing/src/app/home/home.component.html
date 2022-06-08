@@ -5,37 +5,44 @@
     <video autoplay muted loop id="myVideo">
       <source src="assets/videos/bannervid.mp4" type="video/mp4">
     </video>
-      <div class="container" >
-        <div class="grid grid-cols-12 gap-x-6">
+    <div class="container">
+      <div class="grid grid-cols-12 gap-x-6">
 
-          <div class="col-span-7 md:col-span-6 lg:col-span-6 xxl:col-span-7 ll-hero-text">
+        <div class="col-span-7 md:col-span-6 lg:col-span-6 xxl:col-span-7 ll-hero-text">
+        </div>
+
+        <div class=" lg:col-start-8 col-end-11 md:col-start-7 col-end-12 sm:col-span-12 xxl:col-span-7">
+          <div
+            class="rounded-full bg-white shadow bg-opacity-50 px-5 py-0 mr-3 md:col-start-7 col-end-12 xxl:col-span-7"
+            style=" object-fit:scale-down;">
+            <h1 class="lg:mt-12 text-white font-light" style="text-align: center; color: black; font-size: 2.3vw;">
+              Compare and rank apartments based on rent, energy consumption, transportation costs, and more.
+            </h1>
           </div>
 
-          <div class=" lg:col-start-8 col-end-11 md:col-start-7 col-end-12 sm:col-span-12 xxl:col-span-7">
-            <div class="rounded-full bg-white shadow bg-opacity-50 px-5 py-0 mr-3 md:col-start-7 col-end-12 xxl:col-span-7" style=" object-fit:scale-down;">
-              <h1 class="lg:mt-12 text-white font-light" style="text-align: center; color: black; font-size: 2.3vw;" >
-                Compare and rank apartments based on rent, energy consumption, transportation costs, and more.
-              </h1>
-            </div>
-
-            <div class="flex flex-wrap items-center mt-4" style="text-align: right;">
-              <div class="inline-block mr-5">Search:</div>
-              <a mat-button routerLink='/search' class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40 mr-3">Apartments</a>
-              <a mat-button routerLink='/search'  class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40 mr-3">Condos</a>
-              <a mat-button routerLink='/search'  class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40">Townhouses</a>
-              <a mat-button routerLink='/search'  class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40">Houses</a>
-            </div>
-
-            <!-- This is a transparent div to fill the container over the height of the background video -->
-            <div id="spacer-div" class="rounded-full bg-white bg-opacity-0 px-5 py-0 mr-3 md:col-start-7 col-end-12 xxl:col-span-7" style=" object-fit:scale-down; opacity: 0;">
-              <h1 class="lg:mt-12 text-white font-light" style="text-align: center; color: black; font-size: 2.5vw;" >
-                Compare and rank apartments based on rent, energy consumption, transportation costs, and more.
-              </h1>
-            </div>
-
+          <div class="flex flex-wrap items-center mt-4" style="text-align: right;">
+            <div class="inline-block mr-5">Search:</div>
+            <a mat-button routerLink='/search'
+              class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40 mr-3">Apartments</a>
+            <a mat-button routerLink='/search'
+              class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40 mr-3">Condos</a>
+            <a mat-button routerLink='/search'
+              class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40">Townhouses</a>
+            <a mat-button routerLink='/search' class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40">Houses</a>
           </div>
+
+          <!-- This is a transparent div to fill the container over the height of the background video -->
+          <div id="spacer-div"
+            class="rounded-full bg-white bg-opacity-0 px-5 py-0 mr-3 md:col-start-7 col-end-12 xxl:col-span-7"
+            style=" object-fit:scale-down; opacity: 0;">
+            <h1 class="lg:mt-12 text-white font-light" style="text-align: center; color: black; font-size: 2.5vw;">
+              Compare and rank apartments based on rent, energy consumption, transportation costs, and more.
+            </h1>
+          </div>
+
         </div>
       </div>
+    </div>
   </div>
 </div>
 
@@ -63,7 +70,7 @@
       <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">1107</div>
         <h3 class="mb-2">Listings</h3>
-        <p>Amound of available housing opening in Orlando, FL.</p>
+        <p>Amount of available housing opening in Orlando, FL.</p>
       </div>
     </div>
   </div>
