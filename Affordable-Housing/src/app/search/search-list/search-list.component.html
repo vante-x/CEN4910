@@ -10,194 +10,170 @@
                     </button>
                 </div>
                 I am Looking for...
-                <div class="mt-3 flex">
-                    
-                    <input type="radio" value="Apartment" style="margin-right:10px; margin-left: 150px;"><label
-                        style="margin-right:50px">Apartment</label>
-                    <input type="radio" value="House" style="margin-right:10px"><label
-                        style="margin-right:50px">House</label>
-                    <input type="radio" value="Townhome" style="margin-right:10px"><label
-                        style="margin-right:50px">Townhome</label>
-                    <input type="radio" value="Condominium" style="margin-right:10px"><label
-                        style="margin-right:50px">Condominium</label>
+                <div class="mt-3 flex" [formGroup]="housingOptions">
+
+                    <mat-checkbox formControlName="htApartment" 
+                        style="margin-right:10px; margin-left: 150px;">Apartment</mat-checkbox>
+                    <mat-checkbox formControlName="htHouse" 
+                        style="margin-right:10px; margin-left: 150px;">House</mat-checkbox>
+                    <mat-checkbox formControlName="htTownhome" 
+                        style="margin-right:10px; margin-left: 150px;">Townhome</mat-checkbox>
+                    <mat-checkbox formControlName="htCondo" 
+                        style="margin-right:10px; margin-left: 150px;">Condo</mat-checkbox>
                     <button class="bg-primary w-24 rounded-r-md" style="margin-left:50px">
                         <mat-icon class="leading-8">search</mat-icon>
                     </button>
                 </div>
             </div>
             <mat-expansion-panel [expanded]="advanceSearchExpanded">
-                <div class="grid grid-cols-6 gap-6 mt-4">
-                    <ul>Pet Policy Options
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Pet Friendly
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">No Pets
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Cats
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Dogs
-                        </li>
-                    </ul>
-                    <ul>Unit Amenities
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Washer and Dryer Hookup
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">washer and Dryer
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Dishwasher
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Patio
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Microwave
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">High Speed Internet
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">WheelChair Access
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Furnished
-                        </li>
-                    </ul>
-                    <ul>Community Amenities
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Controled Access
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Fitness Center
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Pool
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Covered Parking
-                        </li>
-                        <li>
-                            <input type="checkbox" style="margin-right:10px">Garage
-                        </li>
-                    </ul>
-                    <!--class="col-span-6 sm:col-span-3"-->
-                    <div class="col-span-6 sm:col-span-3">Price Range
-                        <select name="rating" class="
-                            mt-1
-                            block
-                            w-full
-                            py-2
-                            px-3
-                            border border-gray-300
-                            bg-white
-                            rounded-md
-                            shadow-sm
-                            focus:outline-none
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            sm:text-sm
-                            ">
-                            <option>Less than $1000</option>
-                            <option>$1001 - $1500</option>
-                            <option>$1501-$2000</option>
-                            <option>$2000 +</option>
-                        </select>Utility Cost
-                        <select name="rating" class="
-                            mt-1
-                            block
-                            w-full
-                            py-2
-                            px-3
-                            border border-gray-300
-                            bg-white
-                            rounded-md
-                            shadow-sm
-                            focus:outline-none
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            sm:text-sm
-                            ">
-                            <option>Less than $100</option>
-                            <option>$101 - $150</option>
-                            <option>$151 - $200</option>
-                            <option>$200 +</option>
-                        </select>Bedrooms
-                        <select name="rating" class="
-                            mt-1
-                            block
-                            w-full
-                            py-2
-                            px-3
-                            border border-gray-300
-                            bg-white
-                            rounded-md
-                            shadow-sm
-                            focus:outline-none
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            sm:text-sm
-                            ">
-                            <option>Studio</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3+</option>
-                        </select>Bathrooms
-                        <select name="rating" class="
-                            mt-1
-                            block
-                            w-full
-                            py-2
-                            px-3
-                            border border-gray-300
-                            bg-white
-                            rounded-md
-                            shadow-sm
-                            focus:outline-none
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            sm:text-sm
-                            ">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>2 1/2</option>
-                            <option>3 +</option>
-                        </select>Property Name
-                        <select name="rating" class="
-                            mt-1
-                            block
-                            w-full
-                            py-2
-                            px-3
-                            border border-gray-300
-                            bg-white
-                            rounded-md
-                            shadow-sm
-                            focus:outline-none
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            sm:text-sm
-                            ">
-                            <option>Bikini Bottom Apartments</option>
-                            <option>123 Elmo Street</option>
-                            <option>9876 Kidney Lane</option>
-                            <option>Rock Bottom Apartments</option>
-                            <option>3649 Bottle Cap Street</option>
-                            <option>2323 Alfredo Circle</option>
-                            <option>High Price Luxury Apartments</option>
-                            <option>3333 Studio Top Street</option>
-                            <option>Dog Built Apartments</option>
-                        </select>
+                <div class="flex flex-wrap mt-4 xl:mt-8">
+
+                    <div class="d-flex flex-column p-2">
+                        <h5>Options</h5>
+                        <div class="p-2">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Price Range</mat-label>
+                                <mat-select [(value)]="selectedPrice">
+                                    <mat-option>None</mat-option>
+                                    <mat-option value="option1">Under $1,000</mat-option>
+                                    <mat-option value="option2">$1,000 - $1,499</mat-option>
+                                    <mat-option value="option3">$1,500 - $1,999</mat-option>
+                                    <mat-option value="option4">$2,000 and Up</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="p-2">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Utility Cost</mat-label>
+                                <mat-select [(value)]="selectedUtility">
+                                    <mat-option>None</mat-option>
+                                    <mat-option value="option1">Included</mat-option>
+                                    <mat-option value="option2">Under $100</mat-option>
+                                    <mat-option value="option3">$100 - $149</mat-option>
+                                    <mat-option value="option4">$150 and Up</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="p-2">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Bathrooms</mat-label>
+                                <mat-select [(value)]="selectedBathrooms">
+                                    <mat-option>None</mat-option>
+                                    <mat-option value="option1">1</mat-option>
+                                    <mat-option value="option2">2</mat-option>
+                                    <mat-option value="option3">2.5</mat-option>
+                                    <mat-option value="option4">3+</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="p-2">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Bedrooms</mat-label>
+                                <mat-select [(value)]="selectedBedrooms">
+                                    <mat-option>None</mat-option>
+                                    <mat-option value="option1">Studio</mat-option>
+                                    <mat-option value="option1">1</mat-option>
+                                    <mat-option value="option2">2</mat-option>
+                                    <mat-option value="option3">3+</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="p-2">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Property Name</mat-label>
+                                <mat-select [(value)]="selectedProperty">
+                                    <mat-option>None</mat-option>
+                                    <mat-option value="option1">Bikini Bottom Apartments</mat-option>
+                                    <mat-option value="option2">123 Elmo Street</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
                     </div>
-                    <div class="col-span-6">
-                        <button mat-flat-button
-                            style="margin-right:20px ; background-color: #4CAF50">ApplyFilters</button>
-                        <button mat-flat-button style="background-color:grey">Clear Filters</button>
+
+                    <div class="p-2 bd-highlight flex-fill">
+                        <section class="example-section" [formGroup]="petOptions">
+                            <mat-list>
+                                <h5>Pet Policy Options</h5>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="petFriendly">Pet Friendly</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="noPets">No Pets</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                <mat-checkbox formControlName="cats">Cats</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox formControlName="dogs">Dogs</mat-checkbox>
+                            </mat-list-item>
+                        </mat-list>
+                    </section>
                     </div>
+
+                    <div class="p-2 bd-highlight flex-fill">
+                        <section class="example-section" [formGroup]="unitAmenities">
+                            <mat-list>
+                                <h5>Unit Amenities</h5>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="washerDryerHookup">Washer and Dryer Hookup</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="washerDryer">Washer and Dryer</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="dishwasher">Dishwasher</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="patio">Patio</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox formControlName="microwave">Microwave</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox formControlName="highSpeedInternet">High Speed Internet</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox formControlName="wheelChairAccess">Wheel Chair Access</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                                <mat-checkbox formControlName="furnished">Furnished</mat-checkbox>
+                            </mat-list-item>
+                        </mat-list>
+                    </section>
+                    </div>
+
+                    <div class="p-2 bd-highlight flex-fill">
+                        <section class="example-section" [formGroup]="commAmenities">
+                            <mat-list>
+                                <h5>Community Amenities</h5>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="controlledAccess">Controlled Access</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="fitnessCenter">Fitness Center</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="pool">Pool</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="coveredParking">Covered Parking</mat-checkbox>
+                                </mat-list-item>
+                                <mat-list-item>
+                                    <mat-checkbox formControlName="garage">Garage</mat-checkbox>
+                                </mat-list-item>
+                            </mat-list>
+                        </section>
+                    </div>
+
                 </div>
+                    <div class="p-2 bd-highlight">
+                        <button mat-raised-button color="primary" style="margin-right:20px">Apply</button>
+                        <button mat-raised-button color="warn" (click)="resetForms()">Clear</button>
+                    </div>
             </mat-expansion-panel>
         </div>
     </div>
