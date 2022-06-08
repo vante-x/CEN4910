@@ -8,6 +8,9 @@ import { SearchListComponent } from './search-list/search-list.component';
 import { SearchDetailsComponent } from './search-details/search-details.component';
 import { SearchHeroComponent } from './search-list/search-hero/search-hero.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SearchListComponent, SearchDetailsComponent, SearchHeroComponent],
@@ -17,7 +20,10 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     SharedModule,
     MatExpansionModule,
     NgParticlesModule,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ]
 })
 export class SearchModule { }
