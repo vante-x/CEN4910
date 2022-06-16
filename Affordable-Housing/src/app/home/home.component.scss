@@ -1,7 +1,9 @@
 
 
 .ll-hero {
-  background: linear-gradient(180deg, #12908E 40%, rgba(115, 181, 141, 0) 100%);
+  // background: linear-gradient(180deg, #12908E 40%, rgba(115, 181, 141, 0) 100%);
+  // background-image: url("assets/images/BannerImage.png");
+
   padding: 75px 0 150px;
   position: relative;
   .container {
@@ -19,9 +21,11 @@
   &-text {
 
     h1 {
-      font-size: 32px;
+      font-size: 35px;
       line-height: 50px;
-      text-align: right;
+      font-weight:400;
+      text-align: center; 
+      color: white;
     }
   }
 }
@@ -211,15 +215,15 @@
   }
 }
 
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
+// /* Style the video: 100% width and height to cover the entire window */
+#BannerImg {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }

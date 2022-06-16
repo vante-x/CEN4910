@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+export class AppComponent {
+
+}
+
 @Component({
   selector: 'll-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
+
   particlesOptions = {
     particles: {
       color: {
