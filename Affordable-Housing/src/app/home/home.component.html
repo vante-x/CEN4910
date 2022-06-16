@@ -1,45 +1,37 @@
 <div class="ll-hero">
-  <!-- <ng-particles [id]="'home_hero__particles'" class="ll-hero__particles" [options]="particlesOptions"></ng-particles> -->
 
   <div id="video-container">
-    <video autoplay muted loop id="myVideo">
-      <source src="assets/videos/bannervid.mp4" type="video/mp4">
-    </video>
+    <img id="BannerImg" src="assets/images/HomeBanner.png" alt="Italian Trulli">
     <div class="container">
       <div class="grid grid-cols-12 gap-x-6">
 
         <div class="col-span-7 md:col-span-6 lg:col-span-6 xxl:col-span-7 ll-hero-text">
         </div>
 
-        <div class=" lg:col-start-8 col-end-11 md:col-start-7 col-end-12 sm:col-span-12 xxl:col-span-7">
-          <div
-            class="rounded-full bg-white shadow bg-opacity-50 px-5 py-0 mr-3 md:col-start-7 col-end-12 xxl:col-span-7"
-            style=" object-fit:scale-down;">
-            <h1 class="lg:mt-12 text-white font-light" style="text-align: center; color: black; font-size: 2.3vw;">
-              Compare and rank apartments based on rent, energy consumption, transportation costs, and more.
+        <div class=" pb-30 lg:col-start-7 col-end-11 md:col-start-0 col-end-12 sm:col-span-12 xxl:col-span-7">
+          <div class="pb-20 pt-40 mr-3" style="object-fit:scale-down;">
+            <h1 class="rounded-md bg-white bg-opacity-10 lg:mt-12 px-5 py-5" style=" font-size: 25px;
+            line-height: 50px;
+            font-weight:400;
+            text-align: center; 
+            color: white;">
+              Compare and rank apartments based on rent and energy costs.
             </h1>
           </div>
-
-          <div class="flex flex-wrap items-center mt-4" style="text-align: right;">
-            <div class="inline-block mr-5">Search:</div>
-            <a mat-button routerLink='/search'
-              class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40 mr-3">Apartments</a>
-            <a mat-button routerLink='/search'
-              class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40 mr-3">Condos</a>
-            <a mat-button routerLink='/search'
-              class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40">Townhouses</a>
-            <a mat-button routerLink='/search' class="rounded-full bg-white shadow px-5 py-2 bg-opacity-40">Houses</a>
+          <div class="flex flex-col justify-center items-center" style="object-fit:scale-down;">
+            <form action="/" method="GET" class="form">
+              <input type="search" placeholder="Search" class="search-field" />
+            </form>
           </div>
+          <div class="flex flex-wrap justify-center items-center mt-2" style="text-align: right;">
 
-          <!-- This is a transparent div to fill the container over the height of the background video -->
-          <div id="spacer-div"
-            class="rounded-full bg-white bg-opacity-0 px-5 py-0 mr-3 md:col-start-7 col-end-12 xxl:col-span-7"
-            style=" object-fit:scale-down; opacity: 0;">
-            <h1 class="lg:mt-12 text-white font-light" style="text-align: center; color: black; font-size: 2.5vw;">
-              Compare and rank apartments based on rent, energy consumption, transportation costs, and more.
-            </h1>
+            <div class="rounded-md bg-white bg-opacity-10 px-5 py-5inline-block mr-5" style="color: white;">
+              <input class="px-2 py-2 mx-3" type="radio" id="address" name="address" value="address" unchecked>
+                <label class="" for="address">Address</label>  
+              <input class="px-2 py-2 mx-3" type="radio" id="location" name="location" value="location" unchecked>
+                <label class="" for="location">Location</label>  
+            </div>          
           </div>
-
         </div>
       </div>
     </div>
