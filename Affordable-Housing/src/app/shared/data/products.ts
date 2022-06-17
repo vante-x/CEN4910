@@ -12,7 +12,9 @@ export class productsDB {
       rating: 4.8,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.6366,
+      lng:-81.3729
     },
     {
       id: 2,
@@ -26,7 +28,9 @@ export class productsDB {
       rating: 4.8,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.728779,
+      lng:-81.3938557
     },
     {
       id: 3,
@@ -40,7 +44,9 @@ export class productsDB {
       rating: 4.8,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.4366,
+      lng:-81.3729
     },
     {
       id: 4,
@@ -54,7 +60,9 @@ export class productsDB {
       rating: 1.8,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.9211,
+      lng:-81.3913
     },
     {
       id: 5,
@@ -68,7 +76,9 @@ export class productsDB {
       rating: 3.8,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.0300,
+      lng:-81.4627
     },
     {
       id: 6,
@@ -82,7 +92,9 @@ export class productsDB {
       rating: 4.8,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.6427,
+      lng:-81.3890
     },
     {
       id: 7,
@@ -96,7 +108,9 @@ export class productsDB {
       rating: 2.3,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.6253,
+      lng:-81.4058
     },
     {
       id: 8,
@@ -110,7 +124,9 @@ export class productsDB {
       rating: 4.8,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.6366,
+      lng:-81.4729
     },
     {
       id: 9,
@@ -124,7 +140,9 @@ export class productsDB {
       rating: 1.5,
       feedback: 3,
       category: 'digitalization',
-      tags: ['Diesel', 'Hudson', 'Lee']
+      tags: ['Diesel', 'Hudson', 'Lee'],
+      lat:28.6366,
+      lng:81.4229
     }
   ];
 }
