@@ -19,36 +19,17 @@
             </h1>
           </div>
           <div class="flex flex-col justify-center items-center" style="object-fit:scale-down;">
-            
-            <form class="example-form">
-              <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Number</mat-label>
-                <input type="text"
-                       placeholder="Pick one"
-                       aria-label="Number"
-                       matInput
-                       [formControl]="myControl"
-                       [matAutocomplete]="auto">
-                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                    {{option}}
-                  </mat-option>
-                </mat-autocomplete>
-              </mat-form-field>
+            <form action="/" method="GET" class="form">
+              <input type="search" placeholder="Search" class="search-field" />
             </form>
-            
           </div>
           <div class="flex flex-wrap justify-center items-center mt-2" style="text-align: right;">
 
             <div class="rounded-md bg-white bg-opacity-10 px-5 py-5inline-block mr-5" style="color: white;">
-              <mat-radio-button class="px-1 py-2 mx-3" value="1" color="primary">
-                Address
-              </mat-radio-button>
-              
-              <mat-radio-button class="px-1 py-2 mx-3" value="2" color="warn">
-                Location
-              </mat-radio-button>
- 
+              <input class="px-2 py-2 mx-3" type="radio" id="address" name="address" value="address" unchecked>
+                <label class="" for="address">Address</label>  
+              <input class="px-2 py-2 mx-3" type="radio" id="location" name="location" value="location" unchecked>
+                <label class="" for="location">Location</label>  
             </div>          
           </div>
         </div>
@@ -59,7 +40,33 @@
 
 <div></div>
 
-
+<div class="ll-service-area ">
+  <div class="container ">
+    <h1 class="ll-service__title text-center font-extralight mb-12 ">Quick Stats</h1>
+    <div class="ll-services grid grid-cols-12 gap-8">
+      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
+        <div class="number">2.2K</div>
+        <h3 class="mb-2">Rent</h3>
+        <p>The current average rent in Orlando FL. This cost is calculated using store prices in our local database.</p>
+      </div>
+      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
+        <div class="number">$120</div>
+        <h3 class="mb-2">Utility</h3>
+        <p>The average utility costs in Orlando, FL.</p>
+      </div>
+      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
+        <div class="number">$98</div>
+        <h3 class="mb-2">Internet & TV</h3>
+        <p>The average combined cost for internet and TV in Orlando, FL.</p>
+      </div>
+      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
+        <div class="number">1107</div>
+        <h3 class="mb-2">Listings</h3>
+        <p>Amount of available housing opening in Orlando, FL.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -101,81 +108,8 @@
   </div>
 </div> -->
 
-<!-- <app-home-products-table></app-home-products-table> -->
-<div>
-  <div class="container">
-    <div class="ll-section-head text-center mb-5"><br><br>
-      <h3 class="ll-service__title text-center font-extralight mb-12">Featured Housing</h3>
-      <h4 class="ll-section-head__subheading">Top most affordable housing today.</h4>
-    </div>
-    <div> 
-      <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+<ll-home-products></ll-home-products>
 
-        <!--- Note that these columns can be defined in any order.
-              The actual rendered columns are set as a property on the row definition" -->
-
-        <!-- Position Column -->
-        <ng-container matColumnDef="name">
-          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-        </ng-container>
-
-        <!-- Name Column -->
-        <ng-container matColumnDef="address">
-          <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
-        </ng-container>
-
-        <!-- Weight Column -->
-        <ng-container matColumnDef="rent">
-          <mat-header-cell *matHeaderCellDef> Rent </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.rent}} </mat-cell>
-        </ng-container>
-
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="rating">
-          <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.rating}} </mat-cell>
-        </ng-container>
-
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      </mat-table>
-    </div>
-  </div>
-</div>
-
-
-<div class="ll-service-area ">
-  <div class="container ">
-    <h1 class="ll-service__title text-center font-extralight mb-12 ">Quick Stats</h1>
-    <div class="ll-services grid grid-cols-12 gap-8">
-      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
-        <div class="number">2.2K</div>
-        <h3 class="mb-2">Rent</h3>
-        <p>The current average rent in Orlando FL. This cost is calculated using store prices in our local database.</p>
-      </div>
-      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
-        <div class="number">$120</div>
-        <h3 class="mb-2">Utility</h3>
-        <p>The average utility costs in Orlando, FL.</p>
-      </div>
-      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
-        <div class="number">$98</div>
-        <h3 class="mb-2">Internet & TV</h3>
-        <p>The average combined cost for internet and TV in Orlando, FL.</p>
-      </div>
-      <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
-        <div class="number">1107</div>
-        <h3 class="mb-2">Listings</h3>
-        <p>Amount of available housing opening in Orlando, FL.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Copyright 2022 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at https://angular.io/license -->
 <div class="ll-process-area bg-black mt-16">
   <div class="container">
     <h2 class="ll-process__title text-center text-warn mb-8">How-To find affordable housing</h2>
