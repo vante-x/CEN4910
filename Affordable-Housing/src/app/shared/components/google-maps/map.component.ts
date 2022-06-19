@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { GoogleMap, MapInfoWindow, MapMarker, MapTransitLayer } from '@angular/google-maps';
-
+import { Bubble } from 'tsparticles/dist/Options/Classes/Interactivity/Modes/Bubble';
+import { productsDB } from '../../data/products';
 
 @Component({
   selector: 'app-google-map',
@@ -10,13 +11,15 @@ import { GoogleMap, MapInfoWindow, MapMarker, MapTransitLayer } from '@angular/g
 export class MapComponent {
   private _map: Promise<google.maps.Map>;
   private _mapResolver: (value?: google.maps.Map) => void;
+  isLoaded: boolean;
+  products = [];
 
   MapTransitLayer: MapTransitLayer;
   title = 'angular-google-maps-app';
   map!: google.maps.Map;
   @ViewChild(MapInfoWindow, { static: false })
   info!: MapInfoWindow;
-  zoom = 12;
+  zoom = 18;
   maxZoom = 15;
   minZoom = 8;
   
@@ -30,8 +33,9 @@ export class MapComponent {
     maxZoom:this.maxZoom,
     minZoom:this.minZoom,
   }
-  markers = []  as  any;
   infoContent = ''
+  markers = []
+  
 
   ngOnInit() {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -40,52 +44,30 @@ export class MapComponent {
         lng: position.coords.longitude,
       }
     })
-
+    setTimeout(() => {
+      this.products = productsDB.Product;
+      this.isLoaded = true
+    }, 8000)
+    ;
+    this.loadAllMarkers();
   }
 
-  zoomIn() {
-    if (this.zoom < this.maxZoom) this.zoom++;
-    console.log('Get Zoom',this.map.getZoom());
-  }
-
-  zoomOut() {
-    if (this.zoom > this.minZoom) this.zoom--;
-  }
-
-  eventHandler(event: any ,name:string){
-    console.log(event,name);
-    
-    // Add marker on double click event
-    if(name === 'mapDblclick'){
-      this.dropMarker(event)
-    }
-  }
-
-  // Markers
-  logCenter() {
-    console.log(JSON.stringify(this.map.getCenter()))
-  }
-
-  dropMarker(event:any) {
-    this.markers.push({
-      position: {
-        lat: event.latLng.lat(),
-        lng: event.latLng.lng(),
-      },
-      label: {
-        color: 'blue',
-        text: 'Marker label ' + (this.markers.length + 1),
-      },
-      title: 'Marker title ' + (this.markers.length + 1),
-      info: 'Marker info ' + (this.markers.length + 1),
-      options: {
-        animation: google.maps.Animation.DROP,
-      },
+  loadAllMarkers(): void {
+    this.products.forEach(product => {
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(product.lat, product.lng),
+        title: product.name,        
+        map:this.map,
+      });
+      this.markers.push(marker);
     })
   }
 
-  openInfo(marker: MapMarker, content: string) {
-    this.infoContent = content;
+  openInfo(marker: MapMarker, content) {
+    this.infoContent = content
     this.info.open(marker)
   }
 }
+
+
+export {};
