@@ -14,7 +14,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.6366,
-      lng:-81.3729
+      lng:-81.3729,
+      address: '456 Greenleaf Rd'
     },
     {
       id: 2,
@@ -30,7 +31,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.728779,
-      lng:-81.3938557
+      lng:-81.3938557,
+      address: '123 Elmo Street'
     },
     {
       id: 3,
@@ -46,7 +48,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.4366,
-      lng:-81.3729
+      lng:-81.3729,
+      address: '9876 Kidney Lane'
     },
     {
       id: 4,
@@ -62,7 +65,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.9211,
-      lng:-81.3913
+      lng:-81.3913,
+      address: '234 Oleander Blvd'
     },
     {
       id: 5,
@@ -78,7 +82,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.0300,
-      lng:-81.4627
+      lng:-81.4627,
+      address: '3649 Bottle Cap Street'
     },
     {
       id: 6,
@@ -94,7 +99,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.6427,
-      lng:-81.3890
+      lng:-81.3890,
+      address: '2323 Alfredo Circle'
     },
     {
       id: 7,
@@ -110,7 +116,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.6253,
-      lng:-81.4058
+      lng:-81.4058,
+      address: '2000 Park Ave'
     },
     {
       id: 8,
@@ -126,7 +133,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.6366,
-      lng:-81.4729
+      lng:-81.4729,
+      address: '3333 Studio Top Street'
     },
     {
       id: 9,
@@ -142,7 +150,8 @@ export class productsDB {
       category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
       lat:28.6366,
-      lng:81.4229
+      lng:81.4229,
+      address: '1000 Holt Ave'
     }
   ];
 }

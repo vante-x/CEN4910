@@ -24,7 +24,7 @@ import {MatTableModule} from '@angular/material/table';
     MatAutocompleteModule, 
     ReactiveFormsModule, FormsModule, MatFormFieldModule, 
     MatInputModule,
-    MatTableModule
+    MatTableModule,
     ],
 })
 export class HomeModule {}

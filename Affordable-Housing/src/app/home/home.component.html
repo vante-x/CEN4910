@@ -22,10 +22,10 @@
             
             <form class="example-form">
               <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Number</mat-label>
+                <mat-label>Search by neighborhood or address</mat-label>
                 <input type="text"
-                       placeholder="Pick one"
-                       aria-label="Number"
+                       placeholder="Select a neighborhood"
+                       aria-label=""
                        matInput
                        [formControl]="myControl"
                        [matAutocomplete]="auto">
@@ -46,7 +46,7 @@
               </mat-radio-button>
               
               <mat-radio-button class="px-1 py-2 mx-3" value="2" color="warn">
-                Location
+                Neighborhood
               </mat-radio-button>
  
             </div>          
@@ -109,33 +109,33 @@
       <h4 class="ll-section-head__subheading">Top most affordable housing today.</h4>
     </div>
     <div> 
-      <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+      <mat-table #table [dataSource]="products" class="mat-elevation-z8">
 
         <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
 
-        <!-- Position Column -->
+        <!-- Name Column -->
         <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+          <mat-cell *matCellDef="let product of products"> {{product.name}} </mat-cell>
         </ng-container>
 
-        <!-- Name Column -->
+        <!-- Address Column -->
         <ng-container matColumnDef="address">
           <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+          <mat-cell *matCellDef="let product of products"> {{product.address}} </mat-cell>
         </ng-container>
 
-        <!-- Weight Column -->
+        <!-- Rent Column -->
         <ng-container matColumnDef="rent">
           <mat-header-cell *matHeaderCellDef> Rent </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.rent}} </mat-cell>
+          <mat-cell *matCellDef="let product of products"> {{product.price}} </mat-cell>
         </ng-container>
 
-        <!-- Symbol Column -->
+        <!-- Rating Column -->
         <ng-container matColumnDef="rating">
           <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.rating}} </mat-cell>
+          <mat-cell *matCellDef="let product of products"> {{ product.rating }} </mat-cell>
         </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -144,7 +144,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="ll-service-area ">
   <div class="container ">
@@ -162,8 +161,8 @@
       </div>
       <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">$98</div>
-        <h3 class="mb-2">Internet & TV</h3>
-        <p>The average combined cost for internet and TV in Orlando, FL.</p>
+        <h3 class="mb-2">Energy Rating</h3>
+        <p>The average energy and water efficiency rating of apartments in our database.</p>
       </div>
       <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">1107</div>
@@ -173,32 +172,30 @@
     </div>
   </div>
 </div>
-<!-- Copyright 2022 Google LLC. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at https://angular.io/license -->
-<div class="ll-process-area bg-black mt-16">
+
+<div class="ll-process-area mt-16" style="background-color: black;">
   <div class="container">
-    <h2 class="ll-process__title text-center text-warn mb-8">How-To find affordable housing</h2>
+    <h2 class="ll-process__title text-center mb-8">How-To find affordable housing</h2>
     <div class="ll-processes grid grid-cols-12 gap-8">
       <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">01</div>
-        <h3 class="mb-2 text-warn font-bold">Search</h3>
-        <p class="text-white">Search for affordable housing in Orlando, FL.</p>
+        <h3 class="mb-2 font-bold" style="color: #FBB92F;">Search</h3>
+        <p class="text-white" style="color: #fff;">Search for affordable housing in Orlando, FL.</p>
       </div>
       <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">02</div>
-        <h3 class="mb-2 text-warn font-bold">Choose</h3>
-        <p class="text-white">Select from a wide range of available housing based on your needs.</p>
+        <h3 class="mb-2 font-bold" style="color: #FBB92F;">Choose</h3>
+        <p class="text-white" style="color: #fff;">Select from a wide range of available housing based on your needs.</p>
       </div>
       <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">03</div>
-        <h3 class="mb-2 text-warn font-bold">Calculate</h3>
-        <p class="text-white">Calculate your monthly costs with easy to use tools created to cover most scenarios.</p>
+        <h3 class="mb-2 font-bold" style="color: #FBB92F;">Calculate</h3>
+        <p class="text-white" style="color: #fff;">Estimate your monthly rent and utility costs with easy to use tools.</p>
       </div>
       <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">04</div>
-        <h3 class="mb-2 text-warn font-bold">Purchase</h3>
-        <p class="text-white">Contact the landlord and rent/ purchase your selection.</p>
+        <h3 class="mb-2 font-bold" style="color: #FBB92F;">Purchase</h3>
+        <p class="text-white" style="color: #fff;">Contact the landlord and rent/ purchase your selection.</p>
       </div>
     </div>
   </div>
