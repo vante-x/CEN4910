@@ -11,10 +11,11 @@ export class productsDB {
       price: 2000.0,
       rating: 4.8,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.6366,
-      lng:-81.3729
+      lat:28.563504017948954,
+      lng:-81.352415888165,
+      category: 'Non-Compliant',
+      color: '#F9170C',
     },
     {
       id: 2,
@@ -27,10 +28,11 @@ export class productsDB {
       price: 3000.0,
       rating: 4.8,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.728779,
-      lng:-81.3938557
+      lat:28.530933076019487,
+      lng:-81.40116771921969,
+      category: 'Poor',
+      color: '#FCD71D',
     },
     {
       id: 3,
@@ -43,10 +45,11 @@ export class productsDB {
       price: 3000.0,
       rating: 4.8,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.4366,
-      lng:-81.3729
+      lat:28.56290094390906,
+      lng:-81.36941036448336,
+      category: 'Good',
+      color: '#CD12D3',
     },
     {
       id: 4,
@@ -59,10 +62,11 @@ export class productsDB {
       price: 499.0,
       rating: 1.8,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.9211,
-      lng:-81.3913
+      lat:28.555060666949633,
+      lng:-81.39172634348726 ,
+      category: 'Excellent',
+      color: '#069E11',
     },
     {
       id: 5,
@@ -75,10 +79,11 @@ export class productsDB {
       price: 4000.0,
       rating: 3.8,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.0300,
-      lng:-81.4627
+      lat:28.531234705011673,
+      lng: -81.39069637522555,
+      category: 'Superior',
+      color: '#060D9E',
     },
     {
       id: 6,
@@ -91,10 +96,11 @@ export class productsDB {
       price: 2300.0,
       rating: 4.8,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.6427,
-      lng:-81.3890
+      lat:28.561393243691317,
+      lng:-81.3879497931943,
+      category: 'Non-Compliant',
+      color: '#F9170C',
     },
     {
       id: 7,
@@ -107,10 +113,11 @@ export class productsDB {
       price: 5400.0,
       rating: 2.3,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.6253,
-      lng:-81.4058
+      lat:28.580388687906357,
+      lng: -81.38588985667086,
+      category: 'Poor',
+      color: '#FCD71D',
     },
     {
       id: 8,
@@ -123,10 +130,11 @@ export class productsDB {
       price: 3000.0,
       rating: 4.8,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.6366,
-      lng:-81.4729
+      lat:28.51373879665654,
+      lng:-81.36323055491305,
+      category: 'Good',
+      color: '#CD12D3',
     },
     {
       id: 9,
@@ -139,10 +147,11 @@ export class productsDB {
       price: 1000.0,
       rating: 1.5,
       feedback: 3,
-      category: 'digitalization',
       tags: ['Diesel', 'Hudson', 'Lee'],
-      lat:28.6366,
-      lng:81.4229
+      lat: 28.565225490654658,
+      lng:-81.32972717285156,
+      category: 'Excellent',
+      color: '#069E11',
     }
   ];
 }
