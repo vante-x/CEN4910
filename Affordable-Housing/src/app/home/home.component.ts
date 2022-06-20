@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
-// import { productsDB } from '../shared/data/products copy'; 
+import { productsDB } from '../shared/data/products'; 
 
 export interface PeriodicElement {
   name: string;
@@ -39,9 +39,9 @@ export class HomeComponent implements OnInit {
   displayedColumns: string[] = ['name', 'address', 'rent', 'rating'];
   dataSource = ELEMENT_DATA;
 
-  // products = [];
+  products = [];
   constructor() { 
-    // this.products = productsDB.Product
+    this.products = productsDB.Product
   }
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
