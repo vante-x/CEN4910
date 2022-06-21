@@ -1,7 +1,6 @@
+import { Position } from '@angular/compiler';
 import { Component, OnInit, ViewChild  } from '@angular/core';
 import { GoogleMap, MapInfoWindow, MapMarker, MapTransitLayer } from '@angular/google-maps';
-import { productsDB } from '../../data/products';
-
 
 
 @Component({
@@ -38,49 +37,137 @@ export class MapComponent implements OnInit {
 
       }
     })
-    const markers: [google.maps.LatLngLiteral, string][] = [
-      [{ lat: 28.580388687906357, lng: -81.38588985667086 }, "Good"],
-      [{ lat: 28.51373879665654, lng: -81.36323055491305}, "Good"],
-      [{ lat: 28.565225490654658, lng: -81.32972717285156,}, "Good"],
-      [{ lat: 28.563504017948954, lng:-81.352415888165  }, "Non-Compliant"],
-      [{ lat: 28.530933076019487, lng:-81.40116771921969  }, "Non-Compliant"],
-      [{ lat: 28.56290094390906, lng:-81.36941036448336 }, "Non-Compliant"],
-      [{ lat: 28.555060666949633, lng: -81.3879497931943 }, "Poor"],
-      [{ lat: 28.531234705011673, lng: -81.39172634348726 }, "Poor"],
-      [{ lat: 28.561393243691317, lng: -81.39069637522555}, "Poor"],
-      [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
-      [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
-      [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
-      [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
-      [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
-      [{ lat: 34.800326, lng: -111.7665047 }, "Bell Rock"],
+     markers: [
+      { position:{
+        lat: 28.51373879665654, 
+        lng: -81.36323055491305 },
+      label: { 
+        text:'Good'},
+        shape:{
+          type: 'circle',
+          height:30,
+          width:30, 
+          color:'purple'
+        }},
+        { position:{
+          lat:28.565225490654658 , 
+          lng: -81.32972717285156 },
+        label: { 
+          text:'Good'},
+          shape:{
+            type: 'circle',
+            height:30,
+            width:30, 
+            color:'purple'
+          }},
+          { position:{
+            lat: 28.563504017948954, 
+            lng: -81.352415888165  },
+          label: { 
+            text:'Good'},
+            shape:{
+              type: 'circle',
+              height:30,
+              width:30, 
+              color:'purple'
+            }},
+            { position:{
+              lat:28.536145562030278, 
+              lng:  -81.38840936322703},
+            label: { 
+              text:'Non-Compliant'},
+              shape:{
+                type: 'circle',
+                height:30,
+                width:30, 
+                color:'red'
+              }},
+              { position:{
+                lat: 28.530933076019487, 
+                lng: -81.40116771921969  },
+              label: { 
+                text:'Non-Compliant'},
+                shape:{
+                  type: 'circle',
+                  height:30,
+                  width:30, 
+                  color:'red'
+                }},
+                { position:{
+                  lat: 28.56290094390906, 
+                  lng: -81.36941036448336 },
+                label: { 
+                  text:'Non-Compliant'},
+                  shape:{
+                    type: 'circle',
+                    height:30,
+                    width:30, 
+                    color:'red'
+                  }},
+                  { position:{
+                    lat: 28.555060666949633, 
+                    lng:  -81.3879497931943 },
+                  label: { 
+                    text:'Poor'},
+                    shape:{
+                      type: 'circle',
+                      height:30,
+                      width:30, 
+                      color:'yellow'
+                    }},
+                    { position:{
+                      lat:28.531234705011673,
+                      lng: -81.39172634348726 },
+                    label: { 
+                      text:'Poor'},
+                      shape:{
+                        type: 'circle',
+                        height:30,
+                        width:30, 
+                        color:'yellow'
+                      }},
+                      { position:{
+                        lat: 28.561393243691317,  
+                        lng: -81.39069637522555 },
+                      label: { 
+                        text:'Poor'},
+                        shape:{
+                          type: 'circle',
+                          height:30,
+                          width:30, 
+                          color:'yellow'
+                        }},
+
     ];
 
 
     this.loadAllMarkers()
-    ;
-  
   }
-
+ 
   loadAllMarkers(): void {
     this.markers.forEach(marker =>{
       this.markers.push({
+        
         position:{
           lat: marker.lat,
-          lng: marker.lng,
+          lng: marker.lng
         },
         label: {
-          text: "Non-Compliant"
+          text: marker.text
         },
 
-        shape:'Circle',
-        height: 30,
-        width:30,
-        radius: 30
+        shape:{
+          shape: 'Circle',
+          height: 30,
+          width: 30,
+          radius: 30,
+          color: marker.color
+      }
       })
 
       
     })
+    
     
     }
   
