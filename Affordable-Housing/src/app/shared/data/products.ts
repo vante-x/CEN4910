@@ -16,6 +16,7 @@ export class productsDB {
       lng:-81.352415888165,
       category: 'Non-Compliant',
       color: '#F9170C',
+      address: '456 Greenleaf Rd'
     },
     {
       id: 2,
@@ -33,6 +34,7 @@ export class productsDB {
       lng:-81.40116771921969,
       category: 'Poor',
       color: '#FCD71D',
+      address: '123 Elmo Street'
     },
     {
       id: 3,
@@ -50,6 +52,7 @@ export class productsDB {
       lng:-81.36941036448336,
       category: 'Good',
       color: '#CD12D3',
+      address: '9876 Kidney Lane'
     },
     {
       id: 4,
@@ -67,6 +70,7 @@ export class productsDB {
       lng:-81.39172634348726 ,
       category: 'Excellent',
       color: '#069E11',
+      address: '234 Oleander Blvd'
     },
     {
       id: 5,
@@ -84,6 +88,7 @@ export class productsDB {
       lng: -81.39069637522555,
       category: 'Superior',
       color: '#060D9E',
+      address: '3649 Bottle Cap Street'
     },
     {
       id: 6,
@@ -101,6 +106,7 @@ export class productsDB {
       lng:-81.3879497931943,
       category: 'Non-Compliant',
       color: '#F9170C',
+      address: '2323 Alfredo Circle'
     },
     {
       id: 7,
@@ -118,6 +124,7 @@ export class productsDB {
       lng: -81.38588985667086,
       category: 'Poor',
       color: '#FCD71D',
+      address: '2000 Park Ave'
     },
     {
       id: 8,
@@ -135,6 +142,7 @@ export class productsDB {
       lng:-81.36323055491305,
       category: 'Good',
       color: '#CD12D3',
+      address: '3333 Studio Top Street'
     },
     {
       id: 9,
@@ -152,6 +160,7 @@ export class productsDB {
       lng:-81.32972717285156,
       category: 'Excellent',
       color: '#069E11',
+      address: '1000 Holt Ave'
     }
   ];
 }
