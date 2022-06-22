@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductHeroComponent } from './product-list/product-hero/product-hero.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [ProductListComponent, ProductDetailsComponent, ProductHeroComponent],
@@ -17,7 +18,10 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     SharedModule,
     MatExpansionModule,
     NgParticlesModule,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
+    SweetAlert2Module.forRoot(),
+    SweetAlert2Module,
+    SweetAlert2Module.forChild({/*options*/})
   ]
 })
 export class ProductModule { }

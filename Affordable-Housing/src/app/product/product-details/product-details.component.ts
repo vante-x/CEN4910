@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormGroup, FormControl} from '@angular/forms';
+
 
 @Component({
   selector: 'll-product-details',

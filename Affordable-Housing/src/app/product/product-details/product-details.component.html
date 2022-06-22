@@ -27,7 +27,8 @@
          <p> Year built </p>
         </div>
         <div class="border-b px-5 pt-10 pb-12 text-center">
-          <button mat-flat-button class="py-3 px-20 text-xl font-bold" color="accent">
+          <button mat-flat-button class="py-3 px-20 text-xl font-bold" color="accent" 
+          [swal]="['You are redirected to an external website', 'You may go back at any time','warning']">
             <a href="https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292234135300011" alt="Website not available">More Info</a></button>
         </div>
         <!--<br>
@@ -91,7 +92,7 @@
           <img name="map" src={{mapsource}}  > <!-- src="/assets/images/google-maps/map_single_location3.jpg" -->
         </div>
           <div class="border-b text-center pt-10 pb-10">
-            <div class="text-primary text-4xl font-semibold">$3,000.00</div>
+            <div class="text-primary text-4xl font-semibold">$2,000.00</div>
          </div>
         
             <div class="category text-primary inline-block mb-5">Monthly Rent</div>
@@ -105,6 +106,7 @@
             <p>Internet: $60</p>
             <p>Cable: $20</p>
           </div>
+          <h6 class="expenses_title">Total estimated expenses: &nbsp; &nbsp; &nbsp; $2220</h6>
           <div class="border-b p-5 text-center">
             <p class="mt-2">Office hours: 9 - 5</p>
             <button mat-stroked-button class="py-2 px-12 text-lg font-bold text-gray-700">View all hours</button>

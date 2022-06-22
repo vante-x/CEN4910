@@ -82,16 +82,17 @@
     border-style: inset;
 }
 .energy-star-img {
-    display: inline-block;
+    display: none;
     width: 18%;
 }
 .energy-star-text {
     display: inline-block;
-    width: 80%;
+    width: 100%;
     border-style: double;
-    border: #848484;
+    border: #8BC53F;
     font-size: larger;
     font-weight: bold;
+    color: #8bc53f;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   ._title {
