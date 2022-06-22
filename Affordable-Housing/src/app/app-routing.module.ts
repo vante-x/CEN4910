@@ -7,10 +7,10 @@ const baseLayoutRouting: Routes = [
     path: 'products',
     loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
   },
-  {
-    path: 'search',
-    loadChildren: () => import('./search/search.module').then(m => m.SearchModule)
-  },
+  // {
+  //   path: 'search',
+  //   loadChildren: () => import('./search/search.module').then(m => m.SearchModule)
+  // },
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
@@ -27,6 +27,10 @@ const baseLayoutRouting: Routes = [
     path: '',
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./searchbar/searchbar.module').then(m => m.SearchbarModule)
   }
 ];
 
