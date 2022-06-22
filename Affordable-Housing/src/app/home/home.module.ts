@@ -10,21 +10,21 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { DataSource } from '@angular/cdk/collections';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
-    HomeComponent, 
-    HomeProductsComponent, 
+    HomeComponent,
+    HomeProductsComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule, SharedModule, 
-    NgParticlesModule, MatRadioModule, 
-    MatAutocompleteModule, 
-    ReactiveFormsModule, FormsModule, MatFormFieldModule, 
+  imports: [CommonModule, HomeRoutingModule, SharedModule,
+    NgParticlesModule, MatRadioModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule, FormsModule, MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    ],
+  ],
 })
-export class HomeModule {}
+export class HomeModule { }
