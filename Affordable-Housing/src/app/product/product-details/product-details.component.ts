@@ -59,5 +59,11 @@ export class ProductDetailsComponent implements OnInit {
   selectMap(e){
     mapsource: "/assets/images/google-maps/map_single_location3.jpg"
   }
+  public openNewPage() : void {
+    window.open("https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292234135300011", "_self");
+  }
+  public handleDenial() : void {
+    console.log("Done");
+  }
 }
 
