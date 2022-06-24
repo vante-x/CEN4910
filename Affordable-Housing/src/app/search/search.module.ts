@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
 import { SharedModule } from '../shared/shared.module';
-import { SearchProductsComponent } from './search-products/search-products.component';
+//import { SearchProductsComponent } from './search-products/search-products.component';
 import { NgParticlesModule } from 'ng-particles';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -16,8 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
-    SearchProductsComponent,
-    SearchComponent,
+    SearchComponent
   ],
   imports: [CommonModule, SearchRoutingModule, SharedModule,
     NgParticlesModule, MatRadioModule,

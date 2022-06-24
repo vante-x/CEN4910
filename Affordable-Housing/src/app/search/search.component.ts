@@ -4,27 +4,8 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { productsDB } from '../shared/data/products';
 
-export interface PeriodicElement {
-  name: string;
-  address: string;
-  rent: number;
-  rating: number;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  { name: 'Lexington Court', address: '315 W Concord St', rent: 2000.0, rating: 4 },
-  { name: 'Gallery at Mills Park', address: '1650 N Mills Ave', rent: 3000.0, rating: 4 },
-  { name: 'Sanctuary Downtown Condo', address: '100 S Eola Dr', rent: 1600.0, rating: 4 },
-  { name: 'Baldwin Harbpr', address: '1780 Welham ST Building 2', rent: 2300.0, rating: 4 },
-
-];
-
-export class AppComponent {
-
-}
-
 @Component({
-  selector: 'll-search',
+  selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
@@ -37,7 +18,6 @@ export class SearchComponent implements OnInit {
   filteredOptions: Observable<string[]>;
 
   displayedColumns: string[] = ['name', 'address', 'rent', 'rating'];
-  dataSource = ELEMENT_DATA;
 
   products = [];
   constructor() {

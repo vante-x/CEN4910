@@ -23,4 +23,4 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule,
   ],
 })
-export class SearchbarModule {}
+export class SearchbarModule { }

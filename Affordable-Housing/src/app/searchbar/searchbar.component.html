@@ -1,6 +1,4 @@
-
-<div class="ll-hero">
-
+<!--<div class="ll-hero">
     <div id="video-container">
         <img id="BannerImg" src="assets/images/HomeBanner.png" alt="Italian Trulli">
         <div class="container">
@@ -20,10 +18,9 @@
                         </h1>
                     </div>
                     <div class="flex flex-col justify-center items-center" style="object-fit:scale-down;">
-
                         <form class="example-form">
                             <mat-form-field class="example-full-width" appearance="fill">
-                                <mat-label>Search by neighborhood or address</mat-label>
+                                <mat-label>Search by Neighborhod or address</mat-label>
                                 <input type="text" placeholder="Select a neighborhood" aria-label="" matInput
                                     [formControl]="myControl" [matAutocomplete]="auto">
                                 <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
@@ -33,24 +30,127 @@
                                 </mat-autocomplete>
                             </mat-form-field>
                         </form>
-
                     </div>
                     <div class="flex flex-wrap justify-center items-center mt-2" style="text-align: right;">
-
                         <div class="rounded-md bg-white bg-opacity-10 px-5 py-5inline-block mr-5" style="color: white;">
                             <mat-radio-button class="px-1 py-2 mx-3" value="1" color="primary">
                                 Address
                             </mat-radio-button>
-
                             <mat-radio-button class="px-1 py-2 mx-3" value="2" color="warn">
                                 Neighborhood
                             </mat-radio-button>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>-->
+<div class="container">
+    <div class="grid grid-cols-12 gap-x-6">
+
+        <div class="col-span-7 md:col-span-6 lg:col-span-6 xxl:col-span-7 ll-hero-text">
+        </div>
+
+        <div class=" pb-30 lg:col-start-7 col-end-11 md:col-start-0 col-end-12 sm:col-span-12 xxl:col-span-7">
+            <div class="pb-20 pt-40 mr-3" style="object-fit:scale-down;">
+                <h1 class="rounded-md bg-white bg-opacity-10 lg:mt-12 px-5 py-5" style=" font-size: 25px;
+            line-height: 50px;
+            font-weight:400;
+            text-align: left; 
+            color: Black;">
+                    Compare and rank apartments <br> based on rent and energy costs.
+                </h1>
+
+                <div class="flex flex-col " style="object-fit:scale-down;">
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Search by Location or address</mat-label>
+                            <input type="text" placeholder="Select a neighborhood" aria-label="" matInput
+                                [formControl]="myControl" [matAutocomplete]="auto">
+                            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                    {{option}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </form>
+                    <div class="flex flex-wrap items-center mt-2">
+                        <div class="rounded-md bg-white bg-opacity-10 px-5 py-5inline-block mr-5" style="color: black;">
+                            <mat-radio-button class="px-1 py-2 mx-3" value="1" color="primary">
+                                Address
+                            </mat-radio-button>
+                            <mat-radio-button class="px-1 py-2 mx-3" value="2" color="warn">
+                                Location
+                            </mat-radio-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ll-search pb-6">
+    <div class="container">
+        <!--<div class="border overflow-hidden sm:rounded-md p-5">-->
+        <div class="mb-3">
+            <div style="padding-top: 10px; width:35%;">
+                <h5 style="text-align:center">Energy Star Rating</h5>
+                <div class="mt-3 flex flex justify-between flex-wrap" style="padding-top: 10px; text-align:center">
+
+                    <mat-checkbox formControlName="htApartment" style="margin-right:0px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png" height="30"
+                            width="30" />Superior
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htHouse" style="margin-right:0px; margin-left: 0px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/green-dot.png" height="30"
+                            width="30" />Excellent
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htTownhome" style="margin-right:0px; margin-left: 0px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/purple-dot.png" height="30" width="30" />Good
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htCondo" style="margin-right:0px; margin-left: 0%;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/yellow-dot.png" height="30" width="30" />Poor
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htCondo" style="margin-right:0px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/red-dot.png" height="30"
+                            width="30" />Non<br>Compiant
+                    </mat-checkbox>
+                    <button class="bg-primary w-24 rounded-r-md" style="margin-top: 20px; margin-left: 40%">
+                        <mat-icon class="leading-10">search</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div style="padding-top: 20px; width:30%;">
+                <h5 style="text-align:center">Energy Usage Cost</h5>
+                <div class="mt-3 flex flex justify-between flex-wrap" style="padding-top: 10px; text-align:center">
+
+                    <mat-checkbox formControlName="htApartment" style="margin-right:0px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/green.png" height="30" width="30" />Low
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htHouse" style="margin-right:0px; margin-left: px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/lightblue.png" height="30"
+                            width="30" />Below<br>
+                        Average
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htTownhome" style="margin-right:0px; margin-left: px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/yellow.png" height="30" width="30" />Average
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htCondo" style="margin-right:0px; margin-left: 0%;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/orange.png" height="30"
+                            width="30" />Above<br>Average
+                    </mat-checkbox>
+                    <mat-checkbox formControlName="htCondo" style="margin-right:0px;"><img
+                            src="http://maps.google.com/mapfiles/ms/icons/red.png" height="30" width="30" />High
+                    </mat-checkbox>
+                    <button class="bg-primary w-24 rounded-r-md" style="margin-top: 20px; margin-left: 40%">
+                        <mat-icon class="leading-10">search</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
     </div>
 </div>
 
@@ -65,10 +165,8 @@
         </div>
         <div>
             <mat-table #table [dataSource]="products" class="mat-elevation-z8">
-
                 <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
-
                 <!-- Name Column -->
                 <ng-container matColumnDef="name">
                     <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
@@ -107,7 +205,8 @@
             <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
                 <div class="number">2.2K</div>
                 <h3 class="mb-2">Rent</h3>
-                <p>The current average rent in Orlando FL. This cost is calculated using store prices in our local
+                <p>The current average rent in Orlando FL. This cost is calculated using store prices in
+                    our local
                     database.</p>
             </div>
             <div class="ll-service col-span-12 sm:col-span-6 lg:col-span-3">
@@ -136,24 +235,28 @@
             <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
                 <div class="number">01</div>
                 <h3 class="mb-2 font-bold" style="color: #FBB92F;">Search</h3>
-                <p class="text-white" style="color: #fff;">Search for affordable housing in Orlando, FL.</p>
+                <p class="text-white" style="color: #fff;">Search for affordable housing in Orlando, FL.
+                </p>
             </div>
             <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
                 <div class="number">02</div>
                 <h3 class="mb-2 font-bold" style="color: #FBB92F;">Choose</h3>
-                <p class="text-white" style="color: #fff;">Select from a wide range of available housing based on your
+                <p class="text-white" style="color: #fff;">Select from a wide range of available housing
+                    based on your
                     needs.</p>
             </div>
             <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
                 <div class="number">03</div>
                 <h3 class="mb-2 font-bold" style="color: #FBB92F;">Calculate</h3>
-                <p class="text-white" style="color: #fff;">Estimate your monthly rent and utility costs with easy to use
+                <p class="text-white" style="color: #fff;">Estimate your monthly rent and utility costs
+                    with easy to use
                     tools.</p>
             </div>
             <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
                 <div class="number">04</div>
                 <h3 class="mb-2 font-bold" style="color: #FBB92F;">Purchase</h3>
-                <p class="text-white" style="color: #fff;">Contact the landlord and rent/ purchase your selection.</p>
+                <p class="text-white" style="color: #fff;">Contact the landlord and rent/ purchase your
+                    selection.</p>
             </div>
         </div>
     </div>
