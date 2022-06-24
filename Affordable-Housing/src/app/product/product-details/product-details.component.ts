@@ -47,8 +47,12 @@ export class ProductDetailsComponent implements OnInit {
       { this.mapsource= "/assets/images/google-maps/map_schools.jpg" ;}
     }
   
+    //variable for products table
     products = [];
+
+    //variable for product.id passed from home.component to query database
     id: number
+
     constructor(private route: ActivatedRoute) { 
       this.mapsource= "/assets/images/google-maps/map_single_location3.jpg"
       
@@ -61,8 +65,6 @@ export class ProductDetailsComponent implements OnInit {
       });
 
     }
-
-
 
 
   ngOnInit(): void {
