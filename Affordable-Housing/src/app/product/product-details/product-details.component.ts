@@ -1,6 +1,7 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormGroup, FormControl} from '@angular/forms';
+import {productsDB} from '../../shared/data/products';
 
 
 @Component({
@@ -46,12 +47,13 @@ export class ProductDetailsComponent implements OnInit {
       { this.mapsource= "/assets/images/google-maps/map_schools.jpg" ;}
     }
   
-  
+    products: any[];
+    
     constructor() { 
       this.mapsource= "/assets/images/google-maps/map_single_location3.jpg"
+      this.products = productsDB.Product;
     }
-
- 
+       
 
   ngOnInit(): void {
     
