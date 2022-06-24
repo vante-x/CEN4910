@@ -41,11 +41,12 @@
         <p>Cable: $20</p>-->
       </div>
         <div class="border-b px-5 pt-10 pb-12 text-center">
-          <button 
-          [swal]="{ title: 'You'll be redirected to an external website', input: 'text', showDenyButton: true, denyButtonText:'Don't open the link', showCancelButton: true }" 
+          <button mat-flat-button class="py-3 px-20 text-xl font-bold" color="accent"
+          [swal]="{ title: 'You will be redirected to an external website', showDenyButton: true, denyButtonText:'Do not open the link'}" 
           (confirm)="openNewPage()"
-          (deny)="handleDenial()" 
-          (dismiss)="handleDismiss()">More Info</button>
+          (deny)="handleDenial()">
+          More Info
+        </button>
         </div>
         <!--<br>
         <h6 class="amenities_languages">Languages spoken in this area</h6>-->
@@ -67,7 +68,7 @@
             >
           </li>
         </ul>
-        <img class="w-full" src="assets/images/products/apartmentPhoto.gif" alt="img not found" />
+        <!--<img class="w-full" src="assets/images/products/apartmentPhoto.gif" alt="img not found" />-->
         <div class="ll-content mt-8">
           <!--<h5>Special text field</h5>-->
          <!-- <h5>Testimonials</h5>
@@ -83,29 +84,29 @@
         <div>  
           <form >
           <label>
-            <!--<input checked="true" name="list-group"  type="radio"  formControlName="options"  value="map" (change)="changeMap($event)">-->
+            <input checked="true" name="list-group"  type="radio"  formControlName="options"  value="map" (change)="changeMap($event)">
             Map
           </label>
           <label>
-            <!--<input type="radio" name="list-group"  formControlName="options"   value="shopping" (change)="changeMap($event)">-->
+            <input type="radio" name="list-group"  formControlName="options"   value="shopping" (change)="changeMap($event)">
             Restaurants
           </label>
           <label>
-            <!--<input type="radio" name="list-group"  formControlName="options"  value="transit" (change)="changeMap($event)">-->
+            <input type="radio" name="list-group"  formControlName="options"  value="transit" (change)="changeMap($event)">
             Transit
           </label>
           <label>
-            <!--<input type="radio" name="list-group"   formControlName="options"  value="commute" (change)="changeMap($event)">-->
+            <input type="radio" name="list-group"   formControlName="options"  value="commute" (change)="changeMap($event)">
             Commute
           </label>
           <label>
-            <!--<input type="radio" name="list-group"  formControlName="options"  value="schools" (change)="changeMap($event)">-->
+            <input type="radio" name="list-group"  formControlName="options"  value="schools" (change)="changeMap($event)">
             Schools
           </label>
         </form>
          </div>
         <div>
-          <!--<img name="map" src={{mapsource}}  > src="/assets/images/google-maps/map_single_location3.jpg" -->
+          <img name="map" src={{mapsource}} > <!--src="/assets/images/google-maps/map_single_location3.jpg" -->
         </div>    
                
           
