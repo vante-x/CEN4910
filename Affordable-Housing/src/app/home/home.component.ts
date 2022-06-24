@@ -3,21 +3,21 @@ import {FormControl} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { productsDB } from '../shared/data/products'; 
+import { Routes } from '@angular/router';
+import { ProductDetailsComponent } from '../product/product-details/product-details.component';
 
-export interface PeriodicElement {
+export interface ProductsTable {
   name: string;
   address: string;
   rent: number;
   rating: number;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {name: 'Lexington Court', address: '315 W Concord St', rent: 2000.0, rating: 4},
-  {name: 'Gallery at Mills Park', address: '1650 N Mills Ave', rent: 3000.0, rating: 4},
-  {name: 'Sanctuary Downtown Condo', address: '100 S Eola Dr', rent: 1600.0, rating: 4},
-  {name: 'Baldwin Harbpr', address: '1780 Welham ST Building 2', rent: 2300.0, rating: 4},
-
+export const routes: Routes = [
+  { path: './products/:id', component: ProductDetailsComponent}
 ];
+
+
 
 export class AppComponent {
 
@@ -28,6 +28,7 @@ export class AppComponent {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
   
   searchPreference: String;

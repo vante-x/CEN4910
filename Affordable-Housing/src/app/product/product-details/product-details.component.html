@@ -3,14 +3,22 @@
     <div class="grid grid-cols-12 gap-8">
       <div class="col-span-12 md:col-span-6 xl:col-span-6">
         <a href="javascript:void(0)" class="category text-primary inline-block mb-5">Housing Type</a>
-        <h1 class="_title font-medium">Bikini Bottom Apartments</h1>
-        <h3 class="_title font-medium">4321 Forrest Rd<br>Orlando, FL
-        </h3>
-       <!-- <h5 class="category text-primary inline-block mb-5 additional_details">2nd Floor </h5> <br> -->      
-        <h5 class="category text-primary inline-block mb-5 additional_details">Minimum income requirement: $3600</h5>
-       <!-- <h5 class="category text-primary inline-block mb-5 additional_details">Available from June to July</h5>-->
-        <br>
-        <h6 class="amenities_languages">Energy use and gas emisions</h6>
+
+        <!-- queries database for specific product id -->
+        <div *ngFor="let product of products" >
+          <h1 *ngIf="product.id == id" class="_title font-medium">{{product.name}}</h1>
+
+          <h3 *ngIf="product.id == id" class="_title font-medium">{{product.address}} <br>Orlando, FL
+          </h3>
+
+          <!-- <h5 class="category text-primary inline-block mb-5 additional_details">2nd Floor </h5> <br> -->      
+          <h5 *ngIf="product.id == id" class="category text-primary inline-block mb-5 additional_details">Minimum income requirement: $3600</h5>
+          <!-- <h5 class="category text-primary inline-block mb-5 additional_details">Available from June to July</h5>-->
+        </div>
+
+          <br>
+          <h6 class="amenities_languages">Energy use and gas emisions</h6>
+
         <div class="amenities_details">
          <p>Status: Participating </p>
          <div class="energy-star">
