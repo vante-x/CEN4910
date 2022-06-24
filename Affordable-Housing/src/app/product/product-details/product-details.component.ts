@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormGroup, FormControl} from '@angular/forms';
+
 
 @Component({
   selector: 'll-product-details',
@@ -57,6 +58,12 @@ export class ProductDetailsComponent implements OnInit {
   }
   selectMap(e){
     mapsource: "/assets/images/google-maps/map_single_location3.jpg"
+  }
+  public openNewPage() : void {
+    window.open("https://ocpaweb.ocpafl.org/parcelsearch/Parcel%20ID/292234135300011", "_self");
+  }
+  public handleDenial() : void {
+    console.log("Done");
   }
 }
 
