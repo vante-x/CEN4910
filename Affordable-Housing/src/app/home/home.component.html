@@ -26,14 +26,10 @@
               <form class="example-form">
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Search by address</mat-label>
-                  <input type="text"
-                        placeholder="Select an address"
-                        aria-label=""
-                        matInput
-                        [formControl]="myControl"
-                        [matAutocomplete]="auto">
+                  <input type="text" placeholder="Select an address" aria-label="" matInput [formControl]="myControl"
+                    [matAutocomplete]="auto">
                   <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                    <mat-option *ngFor="let product of products" >
+                    <mat-option *ngFor="let product of products">
                       {{product.address}}
                     </mat-option>
                   </mat-autocomplete>
@@ -49,12 +45,8 @@
               <form class="example-form">
                 <mat-form-field class="example-full-width" appearance="fill">
                   <mat-label>Search by neighborhood</mat-label>
-                  <input type="text"
-                        placeholder="Select a neighborhood"
-                        aria-label=""
-                        matInput
-                        [formControl]="myControl"
-                        [matAutocomplete]="auto">
+                  <input type="text" placeholder="Select a neighborhood" aria-label="" matInput
+                    [formControl]="myControl" [matAutocomplete]="auto">
                   <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
                     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                       {{option}}
@@ -64,21 +56,22 @@
               </form>
             </div>
           </div>
-          
+
 
           <div class="flex flex-wrap justify-center items-center mt-2" style="text-align: right;">
 
             <div class="rounded-md bg-white bg-opacity-10 px-5 py-5inline-block mr-5" style="color: white;">
-              <mat-radio-group class="searchbar-radio-group" (change)="changeComboo($event)" [(ngModel)]="searchPreference">
+              <mat-radio-group class="searchbar-radio-group" (change)="changeComboo($event)"
+                [(ngModel)]="searchPreference">
                 <mat-radio-button class="px-1 py-2 mx-3" value="1" color="primary" [checked]="true">
                   Address
                 </mat-radio-button>
-                
+
                 <mat-radio-button class="px-1 py-2 mx-3" value="2" color="warn">
                   Neighborhood
                 </mat-radio-button>
               </mat-radio-group>
-            </div>          
+            </div>
           </div>
         </div>
       </div>
@@ -88,48 +81,6 @@
 
 <div></div>
 
-
-
-
-
-<!-- <div class="ll-about mt-28 mb-28">
-  <div class="container">
-    <div class="flex flex-wrap">
-      <div class="lg:w-1/2 lg:order-last">
-        <a href="javascript:void(0)" class="ll-about__img relative block">
-          <img src="assets/images/about.jpg" alt="About" />
-          <mat-icon class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">play_circle_filled
-          </mat-icon>
-        </a>
-      </div>
-      <div class="lg:w-1/2 lg:pr-10 mt-8 lg:mt-0 ll-about__text">
-        <h2 class="font-medium">Advice: What to look for while searching for affordable housing</h2>
-        <div class="mt-12">
-          <h5 class="font-medium text-black">Travel Costs</h5>
-          <p class="mt-1">
-            Daily travel fees can quickly add up. Paying $3 a day for toll roads will result in $60 a month only for
-            traveling to and from work.
-          </p>
-        </div>
-        <div class="mt-8">
-          <h5 class="font-medium text-black">Utilities</h5>
-          <p class="mt-1">
-            Not all housing utilizes the same amount of energy. Older housing is usually less insulated, resulting in
-            more power needed to cool your home.
-          </p>
-        </div>
-        <div class="mt-8">
-          <h5 class="font-medium text-black">Rent</h5>
-          <p class="mt-1">
-            Cut down on rent as much as possible. A $100 or $200 difference between two housing options may seem trivial
-            at first but this can result in an additional $2400 over the course of a year.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <!-- <app-home-products-table></app-home-products-table> -->
 <div>
   <div class="container">
@@ -137,7 +88,7 @@
       <h3 class="ll-service__title text-center font-extralight mb-12">Featured Housing</h3>
       <h4 class="ll-section-head__subheading">Top most affordable housing today.</h4>
     </div>
-    <div> 
+    <div>
       <mat-table #table [dataSource]="products" class="mat-elevation-z8">
 
         <!--- Note that these columns can be defined in any order.
@@ -146,7 +97,9 @@
         <!-- Name Column -->
         <ng-container matColumnDef="name">
           <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-          <mat-cell *matCellDef="let product of products"> {{product.name}} </mat-cell>
+          <mat-cell *matCellDef="let product of products">
+            <a [routerLink]="['/products',product.id]" style="color:#004B8D;">{{product.name}}</a>
+          </mat-cell>
         </ng-container>
 
         <!-- Address Column -->
@@ -214,12 +167,14 @@
       <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">02</div>
         <h3 class="mb-2 font-bold" style="color: #FBB92F;">Choose</h3>
-        <p class="text-white" style="color: #fff;">Select from a wide range of available housing based on your needs.</p>
+        <p class="text-white" style="color: #fff;">Select from a wide range of available housing based on your needs.
+        </p>
       </div>
       <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">03</div>
         <h3 class="mb-2 font-bold" style="color: #FBB92F;">Calculate</h3>
-        <p class="text-white" style="color: #fff;">Estimate your monthly rent and utility costs with easy to use tools.</p>
+        <p class="text-white" style="color: #fff;">Estimate your monthly rent and utility costs with easy to use tools.
+        </p>
       </div>
       <div class="ll-process col-span-12 sm:col-span-6 lg:col-span-3">
         <div class="number">04</div>
