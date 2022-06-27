@@ -33,7 +33,7 @@ export class ProductDetailsComponent implements OnInit {
     changeMap(e) {
 
       if(e.target.value == 'map')
-       { this.mapsource= "/assets/images/google-maps/map_single_location3.jpg";}
+       { this.mapsource= "/assets/images/google-maps/energy map.jpg";}
   
       if(e.target.value == 'shopping')
       { this.mapsource= "/assets/images/google-maps/map_restaurant.jpg" ;}
