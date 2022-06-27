@@ -6,22 +6,20 @@
  [center]="center"
  [options]="options"
 >
+
  <map-marker
-   #markerElem
+   #marker
    *ngFor="let marker of markers"
    [position]="marker.position"
    [label]="marker.label"
    [title]="marker.title"
-   [shape]="marker.shape"
-   [options]="marker.options"
-   
+   [icon]="marker.icon"
+   [options]="marker.options"   
    (mapClick)="openInfo(markerElem, marker.info)"
  >
  </map-marker>
-
- <map-info-window>{{ infoContent }}
-   
- </map-info-window>
+ 
+ <map-info-window>{{ infoContent }} </map-info-window>
 </google-map>
 
 
