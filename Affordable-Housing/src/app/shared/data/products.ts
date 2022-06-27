@@ -16,7 +16,9 @@ export class productsDB {
       lng:-81.352415888165,
       category: 'Non-Compliant',
       color: '#F9170C',
-      address: '456 Greenleaf Rd'
+      address: '456 Greenleaf Rd',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 115
     },
     {
       id: 2,
@@ -25,7 +27,7 @@ export class productsDB {
         avatar: 'assets/images/avatar.png'
       },
       images: ['assets/images/products/01-2.png', 'assets/images/products/01-2.png', 'assets/images/products/01-3.png'],
-      name: '123 Elmo Street',
+      name: 'Elmo Street Townhouse',
       price: 3000.0,
       rating: 4.8,
       feedback: 3,
@@ -34,7 +36,9 @@ export class productsDB {
       lng:-81.40116771921969,
       category: 'Poor',
       color: '#FCD71D',
-      address: '123 Elmo Street'
+      address: '123 Elmo Street',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 90
     },
     {
       id: 3,
@@ -43,7 +47,7 @@ export class productsDB {
         avatar: 'assets/images/avatar.png'
       },
       images: ['assets/images/products/01-1.png', 'assets/images/products/01-2.png', 'assets/images/products/01-3.png'],
-      name: '9876 Kidney Lane',
+      name: 'Kidney Lane Condo',
       price: 3000.0,
       rating: 4.8,
       feedback: 3,
@@ -52,7 +56,9 @@ export class productsDB {
       lng:-81.36941036448336,
       category: 'Good',
       color: '#CD12D3',
-      address: '9876 Kidney Lane'
+      address: '9876 Kidney Lane',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 80
     },
     {
       id: 4,
@@ -70,7 +76,9 @@ export class productsDB {
       lng:-81.39172634348726 ,
       category: 'Excellent',
       color: '#069E11',
-      address: '234 Oleander Blvd'
+      address: '234 Oleander Blvd',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 150
     },
     {
       id: 5,
@@ -79,7 +87,7 @@ export class productsDB {
         avatar: 'assets/images/avatar.png'
       },
       images: ['assets/images/products/01-1.png', 'assets/images/products/01-2.png', 'assets/images/products/01-3.png'],
-      name: '3649 Bottle Cap Street',
+      name: 'Bottle Cap Street Home',
       price: 4000.0,
       rating: 3.8,
       feedback: 3,
@@ -88,7 +96,9 @@ export class productsDB {
       lng: -81.39069637522555,
       category: 'Superior',
       color: '#060D9E',
-      address: '3649 Bottle Cap Street'
+      address: '3649 Bottle Cap Street',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 80
     },
     {
       id: 6,
@@ -97,7 +107,7 @@ export class productsDB {
         avatar: 'assets/images/avatar.png'
       },
       images: ['assets/images/products/01-1.png', 'assets/images/products/02-2.png', 'assets/images/products/02-3.png'],
-      name: '2323 Alfredo Circle',
+      name: 'Alfredo Circle Home',
       price: 2300.0,
       rating: 4.8,
       feedback: 3,
@@ -106,7 +116,9 @@ export class productsDB {
       lng:-81.3879497931943,
       category: 'Non-Compliant',
       color: '#F9170C',
-      address: '2323 Alfredo Circle'
+      address: '2323 Alfredo Circle',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 95
     },
     {
       id: 7,
@@ -124,7 +136,9 @@ export class productsDB {
       lng: -81.38588985667086,
       category: 'Poor',
       color: '#FCD71D',
-      address: '2000 Park Ave'
+      address: '2000 Park Ave',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 80
     },
     {
       id: 8,
@@ -133,7 +147,7 @@ export class productsDB {
         avatar: 'assets/images/avatar.png'
       },
       images: ['assets/images/products/01-2.png', 'assets/images/products/02-2.png', 'assets/images/products/02-3.png'],
-      name: '3333 Studio Top Street',
+      name: 'Top Street Condo',
       price: 3000.0,
       rating: 4.8,
       feedback: 3,
@@ -142,7 +156,9 @@ export class productsDB {
       lng:-81.36323055491305,
       category: 'Good',
       color: '#CD12D3',
-      address: '3333 Studio Top Street'
+      address: '3333 Studio Top Street',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 100
     },
     {
       id: 9,
@@ -160,7 +176,9 @@ export class productsDB {
       lng:-81.32972717285156,
       category: 'Excellent',
       color: '#069E11',
-      address: '1000 Holt Ave'
+      address: '1000 Holt Ave',
+      contactNumber: '800-123-4567',
+      utilityEstimate: 120
     }
   ];
 }
