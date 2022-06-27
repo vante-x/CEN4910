@@ -1,7 +1,8 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { FormGroup, FormControl} from '@angular/forms';
 import {productsDB} from '../../shared/data/products';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -47,11 +48,22 @@ export class ProductDetailsComponent implements OnInit {
       { this.mapsource= "/assets/images/google-maps/map_schools.jpg" ;}
     }
   
-    products: any[];
+    //variable for products table
+    products = [];
+
+    //variable for product.id passed from home.component to query database
+    id: number
     
-    constructor() { 
+    constructor(private route: ActivatedRoute) { 
       this.mapsource= "/assets/images/google-maps/map_single_location3.jpg"
-      this.products = productsDB.Product;
+      
+      //reference to the products db
+      this.products = productsDB.Product
+
+      //pulls product id from url routerlink query
+      this.route.params.subscribe(params => {
+        this.id = params['id'];
+      });
     }
        
 
