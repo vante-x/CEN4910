@@ -2,183 +2,146 @@
 <div class="ll-search pb-6">
     <div class="container">
         <div class="border overflow-hidden sm:rounded-md p-5">
-            <div class="mb-3">
-                <div class="flex justify-between flex-wrap">
-                    <h4>Search</h4>
-                    <button (click)="advanceSearchExpanded = !advanceSearchExpanded" mat-button>
-                        <mat-icon>tune</mat-icon> ADVANCED SEARCH
-                    </button>
+            <div class="container">
+                <div class="">
+                  <div class="grid gap-2 grid-cols-2 ">
+                    <div class="col-span-1" style="object-fit:scale-down;">
+                      <div>
+                        <h1 class="rounded-md bg-white bg-opacity-10 pt-20" style=" font-size: 20px;
+                        line-height: 50px;
+                        font-weight:400;
+                        text-align: center; 
+                        color: black;">
+                          Compare and rank apartments based on rent and energy costs.
+                        </h1>
+                      </div>  
+
+                      <!-- </div> -->
+          
+                      <!-- if the address radio button is selected, autocomplete is pulled from 
+                      the addresses in the database -->
+                      <div *ngIf="searchPreference=='1'">
+                        <div class="flex justify-center items-center" style="object-fit:scale-down;">
+                          <form class="example-form">
+                            <mat-form-field class="example-full-width" appearance="fill">
+                              <mat-label class="text-black">Search by address</mat-label>
+                              <input type="text"
+                                    placeholder="Select an address"
+                                    aria-label=""
+                                    matInput
+                                    [formControl]="myControl"
+                                    [matAutocomplete]="auto">
+                              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                <mat-option *ngFor="let product of products" [value]="product.address">
+                                  {{product.address}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                          </form>
+                        </div>
+                      </div>
+            
+                      <!-- if the neighborhood radio button is selected, autocomplete is pulled from 
+                      the options list in the home.component.ts file -->
+                      <div *ngIf="searchPreference=='2'">
+                        <div class="flex justify-center items-center" style="object-fit:scale-down;">
+                          <form class="example-form">
+                            <mat-form-field class="example-full-width" appearance="fill">
+                              <mat-label>Search by neighborhood</mat-label>
+                              <input type="text"
+                                    placeholder="Select a neighborhood"
+                                    aria-label=""
+                                    matInput
+                                    [formControl]="myControl"
+                                    [matAutocomplete]="auto">
+                              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                  {{option}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                          </form>
+                        </div>
+                      </div>
+                      
+            
+                      <div class="flex flex-wrap justify-center items-center mt-2" style="text-align: right;">
+            
+                        <div class="rounded-md bg-white bg-opacity-10 px-5 py-5inline-block mr-5" style="color: black;">
+                          <mat-radio-group class="searchbar-radio-group" (change)="changeComboo($event)" [(ngModel)]="searchPreference">
+                            <mat-radio-button class="px-1 py-2 mx-3" value="1" color="primary" [checked]="true">
+                              Address
+                            </mat-radio-button>
+                            
+                            <mat-radio-button class="px-1 py-2 mx-3" value="2" color="warn">
+                              Neighborhood
+                            </mat-radio-button>
+                          </mat-radio-group>
+                        </div>          
+                      </div>
+                    </div>
+                    <div class="col-start-2 col-span-1">
+                      <img name="map"  src="/assets/images/google-maps/energy map.jpg" style="height: 400px;">
+                    </div>
+                  </div>
+                  <div>
+
+                  </div>
                 </div>
-                I am Looking for...
-                <div class="mt-3 flex" [formGroup]="housingOptions">
-
-                    <mat-checkbox formControlName="htApartment" 
-                        style="margin-right:10px; margin-left: 150px;">Apartment</mat-checkbox>
-                    <mat-checkbox formControlName="htHouse" 
-                        style="margin-right:10px; margin-left: 150px;">House</mat-checkbox>
-                    <mat-checkbox formControlName="htTownhome" 
-                        style="margin-right:10px; margin-left: 150px;">Townhome</mat-checkbox>
-                    <mat-checkbox formControlName="htCondo" 
-                        style="margin-right:10px; margin-left: 150px;">Condo</mat-checkbox>
-
-                    <button class="bg-primary w-24 rounded-r-md" style="margin-left:50px">
-                        <mat-icon class="leading-8">search</mat-icon>
-                    </button>
-                </div>
-            </div>
-            <mat-expansion-panel [expanded]="advanceSearchExpanded">
-                <div class="flex flex-wrap mt-4 xl:mt-8">
-
-                    <div class="d-flex flex-column p-2">
-                        <h5>Options</h5>
-                        <div class="p-2">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Price Range</mat-label>
-                                <mat-select [(value)]="selectedPrice">
-                                    <mat-option>None</mat-option>
-                                    <mat-option value="option1">Under $1,000</mat-option>
-                                    <mat-option value="option2">$1,000 - $1,499</mat-option>
-                                    <mat-option value="option3">$1,500 - $1,999</mat-option>
-                                    <mat-option value="option4">$2,000 and Up</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="p-2">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Utility Cost</mat-label>
-                                <mat-select [(value)]="selectedUtility">
-                                    <mat-option>None</mat-option>
-                                    <mat-option value="option1">Included</mat-option>
-                                    <mat-option value="option2">Under $100</mat-option>
-                                    <mat-option value="option3">$100 - $149</mat-option>
-                                    <mat-option value="option4">$150 and Up</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="p-2">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Bathrooms</mat-label>
-                                <mat-select [(value)]="selectedBathrooms">
-                                    <mat-option>None</mat-option>
-                                    <mat-option value="option1">1</mat-option>
-                                    <mat-option value="option2">2</mat-option>
-                                    <mat-option value="option3">2.5</mat-option>
-                                    <mat-option value="option4">3+</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="p-2">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Bedrooms</mat-label>
-                                <mat-select [(value)]="selectedBedrooms">
-                                    <mat-option>None</mat-option>
-                                    <mat-option value="option1">Studio</mat-option>
-                                    <mat-option value="option1">1</mat-option>
-                                    <mat-option value="option2">2</mat-option>
-                                    <mat-option value="option3">3+</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="p-2">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Property Name</mat-label>
-                                <mat-select [(value)]="selectedProperty">
-                                    <mat-option>None</mat-option>
-                                    <mat-option value="option1">Bikini Bottom Apartments</mat-option>
-                                    <mat-option value="option2">123 Elmo Street</mat-option>
-                                </mat-select>
-                            </mat-form-field>
-                        </div>
-                    </div>
-
-                    <div class="p-2 bd-highlight flex-fill">
-                        <section class="example-section" [formGroup]="petOptions">
-                            <mat-list>
-                                <h5>Pet Policy Options</h5>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="petFriendly">Pet Friendly</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="noPets">No Pets</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                <mat-checkbox formControlName="cats">Cats</mat-checkbox>
-                            </mat-list-item>
-                            <mat-list-item>
-                                <mat-checkbox formControlName="dogs">Dogs</mat-checkbox>
-                            </mat-list-item>
-                        </mat-list>
-                    </section>
-                    </div>
-
-                    <div class="p-2 bd-highlight flex-fill">
-                        <section class="example-section" [formGroup]="unitAmenities">
-                            <mat-list>
-                                <h5>Unit Amenities</h5>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="washerDryerHookup">Washer and Dryer Hookup</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="washerDryer">Washer and Dryer</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="dishwasher">Dishwasher</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="patio">Patio</mat-checkbox>
-                            </mat-list-item>
-                            <mat-list-item>
-                                <mat-checkbox formControlName="microwave">Microwave</mat-checkbox>
-                            </mat-list-item>
-                            <mat-list-item>
-                                <mat-checkbox formControlName="highSpeedInternet">High Speed Internet</mat-checkbox>
-                            </mat-list-item>
-                            <mat-list-item>
-                                <mat-checkbox formControlName="wheelChairAccess">Wheel Chair Access</mat-checkbox>
-                            </mat-list-item>
-                            <mat-list-item>
-                                <mat-checkbox formControlName="furnished">Furnished</mat-checkbox>
-                            </mat-list-item>
-                        </mat-list>
-                    </section>
-                    </div>
-
-                    <div class="p-2 bd-highlight flex-fill">
-                        <section class="example-section" [formGroup]="commAmenities">
-                            <mat-list>
-                                <h5>Community Amenities</h5>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="controlledAccess">Controlled Access</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="fitnessCenter">Fitness Center</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="pool">Pool</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="coveredParking">Covered Parking</mat-checkbox>
-                                </mat-list-item>
-                                <mat-list-item>
-                                    <mat-checkbox formControlName="garage">Garage</mat-checkbox>
-                                </mat-list-item>
-                            </mat-list>
-                        </section>
-                    </div>
-
-                </div>
-                    <div class="p-2 bd-highlight">
-                        <button mat-raised-button color="primary" style="margin-right:20px">Apply</button>
-                        <button mat-raised-button color="warn" (click)="resetForms()">Clear</button>
-                    </div>
-            </mat-expansion-panel>
+              </div>
         </div>
     </div>
 </div>
+
+
+<!-- PRODUCTS TABLE -->
+<div>
+  <div class="container">
+    <div class="ll-section-head text-center mb-5"><br><br>
+      <h3 class="ll-service__title text-center font-extralight mb-12">Featured Housing</h3>
+      <h4 class="ll-section-head__subheading">Top most affordable housing today.</h4>
+    </div>
+    <div> 
+      <mat-table #table [dataSource]="products" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let product of products"> 
+            <a [routerLink]="['/products', product.id]" style="color: #004B8D;">{{product.name}} </a></mat-cell>
+        </ng-container>
+
+        <!-- Address Column -->
+        <ng-container matColumnDef="address">
+          <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+          <mat-cell *matCellDef="let product of products"> {{product.address}} </mat-cell>
+        </ng-container>
+
+        <!-- Rent Column -->
+        <ng-container matColumnDef="rent">
+          <mat-header-cell *matHeaderCellDef> Rent </mat-header-cell>
+          <mat-cell *matCellDef="let product of products"> {{product.price}} </mat-cell>
+        </ng-container>
+
+        <!-- Rating Column -->
+        <ng-container matColumnDef="rating">
+          <mat-header-cell *matHeaderCellDef> Rating </mat-header-cell>
+          <mat-cell *matCellDef="let product of products"> {{ product.rating }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+</div>
+
+
+<!-- PRODUCTS GRID -->
+<!-- 
 <div class="ll-products-area mb-24">
     <div class="container">
         <div class="grid grid-cols-12 gap-6 xxl:gap-8" *ngIf="isLoaded">
@@ -239,5 +202,5 @@
                 </a>
             </div>
         </div>
-    </div>
-</div>
+    </div> -->
+<!-- </div> -->
