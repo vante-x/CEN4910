@@ -10,8 +10,11 @@ import { SearchHeroComponent } from './search-list/search-hero/search-hero.compo
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [SearchListComponent, SearchDetailsComponent, SearchHeroComponent],
   imports: [
@@ -23,7 +26,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgxSkeletonLoaderModule,
     MatCheckboxModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatRadioModule,
+    MatAutocompleteModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class SearchModule { }
