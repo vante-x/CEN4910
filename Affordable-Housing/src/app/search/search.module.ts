@@ -15,6 +15,8 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
   declarations: [SearchListComponent, SearchDetailsComponent, SearchHeroComponent],
   imports: [
@@ -31,7 +33,8 @@ import {MatInputModule} from '@angular/material/input';
     MatAutocompleteModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
   ]
 })
 export class SearchModule { }
